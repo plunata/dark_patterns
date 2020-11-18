@@ -1,0 +1,412 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english, ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{filecontents}
+\usepackage[backend=biber,style=numeric, autocite=plain,sorting=none]{biblatex}
+\usepackage{hyperref}
+\usepackage[raggedright]{titlesec}
+\usepackage{enumitem}
+\usepackage{doi}
+\usepackage{url}
+\usepackage[automark,headsepline]{scrlayer-scrpage}
+
+\hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
+%Formatierung des Paragraphen, sodass eine neue Zeile beginnt
+
+%\titleformat*{\subparagraph}{\bfseries\itshape}
+%\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
+
+% package for bibliography
+%\usepackage[numbers]{natbib}
+
+%\bibliographystyle{unsrtnat}
+
+\addbibresource{Referenzen.bib}
+
+
+\pagestyle{scrheadings}
+\ihead[]{Dark Patterns}
+\ohead[]{\today}%bla
+\cfoot[]{\pagemark}
+
+\setcounter{secnumdepth}{4}
+%section depth (value steht fuer Stellen); bei 4 werden die Paragraphen durchnummeriert
+\setcounter{tocdepth}{3}
+%table of content depth
+
+
+
+
+\begin{document}
+	\title{
+	\begin{figure}[!ht]
+		% \flushleft
+			%\includegraphics[width=0.26\textwidth]{img/THlogoheader.pdf}
+	\end{figure}
+	\vspace{1cm}
+	\Huge Dark Patterns
+	}
+	
+	\vspace{1cm}
+	
+	% if you are the only author, you might use the following
+	% \author{Name of student}	
+	
+	% Insert here your name and correct mail address
+	\author{\Large \href{mailto:natalie.tork_alinaghipour@smail.th-koeln.de}{Natalie Tork Alinaghipour} 
+	\vspace{1cm}}
+	
+	% name of the course and module
+	\date{
+	\large Praxisprojekt Wintersemester 2020/2021 \\ 
+	\vspace{0.8cm}
+	\large Betreuuer: Prof. Gerhard Hartmann \\
+	\vspace{1cm}
+	\today
+	}
+
+	\maketitle
+	\setlength{\parindent}{0pt}
+
+\vspace{2cm}
+\begin{abstract}
+
+
+
+\end{abstract}
+	\newpage
+	\tableofcontents
+	\newpage
+	
+\section{Einleitung} 
+\label{sec:einleitung}
+
+\subsection{Problemfeld und Kontext}
+\label{sub:problemfeld_und_kontext}
+Bei der Gestaltung von digitalen Systemen spielt die User Experience (UX) eine wichtige Rolle für Online-Marketing und -Vertrieb, da sie maßgeblich zum Erfolg eines Unternehmens beiträgt. UX Design basiert unter anderem auf psychologischen und verhaltensökonomischen Erkenntnissen und hat langfristig zum Ziel, die Erfahrung des Nutzers während der Interaktion eines Produkts zu verbessern. Allerdings können diese Methoden auch dazu missbraucht werden, die menschliche Wahrnehmung und Verhaltensweisen zu beeinflussen, um wirtschaftlich davon zu profitieren. Nutzer können so zu nicht intendierten Taten verleitet und infolgedessen benachteiligen werden. Dies zu bemerken ist für viele schwierig, da der Zweck nicht transparent gemacht wird.
+Diese Taktiken werden als "Dark Patterns" bezeichnet und werden bereits ethisch erforscht. Heutzutage findet diese Art von manipulativem Design in vielen verschiedenen Bereichen Anwendung, wie in Desktop-, Web- oder Mobilen Applikationen, sowie in Games, Proxemischer Interaktion\footnote{\label{foot:1} Proxemische Interaktion bedeutet die Verbundenheit und Kommunikation zwischen Geräten und zwischen Mensch und Maschine, sobald diese sich in unmittelbarer Nähe zueinander befinden} und Künstlicher Intelligenz. 
+
+
+\subsection{Ist-Zustand}
+\label{sub:ist-zustand}
+Der Begriff "Dark Patterns" wurde von dem UX-Experten Harry Brignull geprägt, als er im Jahr 2010 einen Blog-Beitrag veröffentlichte \cite{brignull1} und kurze Zeit später einen Vortrag auf der UX Brighton Conference hielt. Inzwischen wurden bereits verschiedene Paper über das Thema verfasst, die verschiedene Nutzungskontexte beschreiben. Da demnach viele unterschiedliche Technologien Dark Patterns enthalten, ist der Themenbereich recht unübersichtlich und komplex, wodurch eine ausführliche Recherche notwendig ist.
+
+\subsection{Ziel und Lösungsansatz}
+\label{sub:ziel_und_loesungsansatz}
+Das Ziel soll es sein, eine Übersicht in das Themenkomplex Dark Patterns zu bringen, indem diese nach Systemen strukturiert wird. Es soll analysiert werden, welche Dark Patterns zu den jeweiligen Nutzungskontexten existieren und welche versteckten Geschäftsmodelle dahinterstecken. Ebenso gilt es herauszufinden, welche Zielgruppe von diesen Methoden betroffen sind und wer die Stakeholder sind. 
+
+\subsection{Motivation}
+\label{motivation}
+Das Thema hat eine hohe gesellschaftliche Relevanz, da heutzutage das Internet für die meisten Menschen in das Leben integriert ist. Alltägliche Aufgaben können dadurch einfacher und schneller bewältigt werden. Jedoch kann die Tatsache, dass viele auf eine gute Usability angewiesen sind, ausgenutzt werden und demnach stellt dies ein mögliches Risiko dar. 
+Zudem hat die Datenschutz-Grundverordnung dazu geführt, dass die Bedingungen der Nutzung bestimmter Dienste zu umfangreich und zu kompliziert formuliert sind, sodass das Lesen unnötig erschwert oder gar unmöglich gemacht wird. Dies hat zur Folge, dass Nutzer wegen Zeit- und Alternativenmangel diesen Bedingungen zustimmen, ohne diese vollständig zu lesen.  
+Aus den oben genannten Gründen weist das Thema auch eine hohe politische Relevanz auf, da es von großer Notwendigkeit ist, Verbraucher:innen durch sinnvolle Maßnahmen vor alldem zu schützen und sie auf Dark Patterns aufmerksam zu machen.
+
+
+%bla blubb \cite{einstein}.
+
+\section{Hintergrund} % (fold)
+\label{sec:hintergrund}
+
+
+\subsection{Über Dark Patterns} % (fold)
+\label{sub:die_hintergruende_der_dark_patterns}
+
+
+\subsection{Versteckte Geschäftsmodelle} % (fold)
+\label{sub:versteckte_geschaeftsmodelle}
+
+
+\subsubsection{Stakeholder} % (fold)
+\label{sub:stakeholder}
+
+
+\subsection{Zielgruppen der Dark Patterns} % (fold)
+\label{sub:zielgruppen_der_dark_patterns}
+
+
+\subsection{Allgemeine Dark Patterns Kategorien nach Gray} % (fold)
+\label{sub:dark_patterns_kategorien}
+Der Ausdruck \glqq Dark Patterns\grqq{} stammt von Harry Brignull, der sich noch heute aktiv gegen diese Methoden in digitalen Produkten einsetzt und als Sachverständiger in dem Bereich agiert. Zudem führt er zusammen mit Alexander Darlington\footnote{\label{foot:2} Alexander Darlington ist im Bereich UX Research bei Aviva in Großbritannien tätig und betreibt Forschung in Ethischem Design.} die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}. Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien eingeteilt, die die Strategien und Motivation dahinter zusammenfasst \cite{gray}. 
+Im Folgenden wird erläutert, was unter den einzelnen Kategorien zu verstehen ist und wie die Taxonomie von Brignull in diese einzuordnen ist. Diese Praktiken finden allgemein in der Gestaltung von digtalen Benutzeroberflächen Anwendung.
+
+\subsubsection{Nagging}
+Während der Interaktion mit dem System wird der Nutzer ein- oder mehrmals entgegen seiner Erwartung umgeleitet und bei der Aufgabenerledigung unterbrochen. Dabei hat die Unterbrechung für den Nutzer keine Relevanz. Diese treten meist in den folgenden Formen auf:
+\begin{enumerate}[label=\arabic*)]
+	\item{Pop-Ups, die den Zugriff auf das Interface sperren,}
+	\item{Audionotizen, die zur Ablenkung führen,}
+	\item{andere Formen von Aktionen, die den Nutzer von der Erledigung seiner Aufgaben ablenken.}
+\end{enumerate}
+
+\subsubsection{Obstruction} 
+Die Erledigung der Aufgaben wird so erschwert, dass der Nutzer davon abgebracht wird. Ein mögliches Vorkommnis ist, dass der Nutzer in dem Moment, wo er auf die Barriere stößt, über die Beschränkung der nutzbaren Funktionen benachrichtigt wird. Der Nutzer muss diese Funktionen also erst freischalten.	
+
+\paragraph{Roach Motel (Brignull)} 
+Führt den Nutzer auf einen langen Pfad und ruft gleichzeitig eine Disorientierung durch unklare Formulierungen hervor. Der Nutzer gerät hier leicht in eine Situation und kommt nur schwer aus dieser Lage heraus. Dies geschieht beim Abonnieren eines Services oder der Registrierung bei einem Service, indem es dem Nutzer schwer oder sogar unmöglich gemacht wird, diesen Service wieder abzubestellen oder das Konto zu löschen.
+
+\paragraph{Price Comparison Prevention (Brignull)} 
+Hindert den Nutzer daran, Preise von Produkten und Dienstleistungen zu vergleichen. Dies kann zum Beispiel der Fall sein, wenn es dem Nutzer nicht möglich ist, Produktinformationen zu kopieren, um damit Suchanfragen stellen zu können.
+
+\paragraph{Intermediate Currency (Gray et al.)} 
+Der Nutzer wird gezwungen, echtes Geld in eine virtuelle Währung zu investieren, damit er Käufe tätigen kann. Oft kommt dies in Apps vor, die In-App Käufe anbieten.
+
+\subsubsection{Sneaking}
+Relevante Informationen werden vor dem Nutzer versteckt oder verschleiert, oder die Anzeige der Information wird verzögert. Ziel ist es, den Nutzer dazu zu führen, eine Aktion auszuführen, die in der Regel nicht in seinem Interesse ist, wenn er Kenntnis davon hätte. Dazu zählen versteckte Kosten oder unerwünschte Effekte durch die Ausführung einer bestimmten Aktion.
+
+\paragraph{Forced Continuity (Brignull)}
+Wenn ein Nutzer eine Frist versäumt, soll dies ausgenutzt werden. Oft wird der Nutzer hier zur Kasse gebeten werden, wenn ein Service automatisch erneuert wird, weil dieser nicht rechtzeitig vor Ablauf einer Probezeit gekündigt wurde.
+
+\paragraph{Hidden Costs (Brignull)} 
+Versteckte Kosten werden erst später offenbart, nachdem ein potentieller Kunde mit einem besonderen Angebot angelockt wurde. Wird dieser beispielsweise kurz vor dem Abschluss eines Bestellvorgangs darauf hingewiesen, dass das Angebot zeitlich begrenzt ist oder diverse Gebühren, Steuern oder hohe Liefergebühren anfallen, so kann das auf dieses Dark Pattern hinweisen. 
+
+\paragraph{Sneak into Basket (Brignull)}
+Dem Nutzer wird ohne sein Wissen automatisch ein Artikel in den Warenkorb gelegt, was unbemerkt bleiben kann, wenn der Nutzer seine Einkaufsliste vor der Bestellung nicht überprüft. Oft basieren solche Artikel angeblich auf einer Empfehlung für den Kunden.
+
+\paragraph{Bait and Switch (Brignull)}
+Gewohnte Interaktionselemente einer Applikation führen zu einem unerwarteten und unerwünschten Ergebnis. 
+Für Aufsehen sorgte beispielsweise Microsoft im Jahr 2016, als Nutzer von älteren Windows-Versionen dazu gedrängt wurden, das Betriebssystem auf Windows 10 zu aktualisieren \cite{thurrott}. Ein Schließen der Meldung durch das "X"-Button führte zwar zum Schließen des Fensters, allerdings war den Nutzern nicht bewusst, dass sie dabei gegen ein Upgrade auf Windows 10 keinen Widerspruch eingelegt haben. Daraufhin wurde bei diesen Nutzern zu einem von Windows festgelegten Zeitpunkt das Upgrade durchgeführt. 
+%Bild von Windows 10 Upgrade einfügen?
+
+\subsubsection{Interface Interference}
+Sobald bestimmte Aktionen, die überdeckt werden von anderen Aktionen, den Nutzer bei der Erledigung seiner Aufgaben stören oder die Sichtbarkeit von Aktionen oder Informationen beschränken, spricht man von Interface Interference. 
+Gray \cite{gray} unterscheidet dabei zwischen Hidden Information, Preselection und Aesthetic Manipulation. 
+
+
+\paragraph{Hidden Information}
+Sorgt dafür, dass wichtige Informationen nur schwer auffindbar und lesbar sind. Demnach bekommt der Nutzer das Gefühl vermittelt, als seien die Informationen für ihn nicht von Bedeutung. Oft sind diese dargestellt als Optionen oder als Kleingedrucktes, verblasster Text oder in Form von schwer verständlichen Geschäfts-bedingungen.
+
+\paragraph{Preselection}
+Eine Option in einem Dialog ist von Anfang an ausgewählt, noch bevor der Nutzer eine eigene Auswahl getroffen hat. Meistens entspricht die Auswahl nicht dem Interesse oder der Absicht des Nutzers, sofern er keine Anpassungen vornimmt. Oft geht er in dem Fall dennoch davon aus, dass die Vorauswahl im besten Interesse des Nutzers ist. 
+ 
+\paragraph{Aesthetic Manipulation (Gray et al.)}
+Die Form der Benutzeroberfläche wird so gestaltet, dass die Aufmerksamkeit des Nutzers auf etwas anderes gelenkt oder dass er von etwas anderem überzeugt wird. Brignull hat dieses Dark Pattern als \glqq Misdirection\grqq{} bezeichnet. 
+Darunter fallen die Dark Patterns Toying with emotions, False Hierarchy, Disguised Ad und Trick Question.\newline
+
+%\subparagraph{Toying with Emotions (Gray et al.)} 
+%Stichpunkte stattdessen verwenden!
+\hspace*{2em}\textbf{Toying with Emotions (Gray et al.)}\newline
+setzt Elemente wie Farben, Sprache oder Schreibstil gezielt dafür ein, Emotionen hervorzurufen, um den Nutzer dazu zu bringen, eine bestimmte Aktion auszuführen. Hier kommen unter anderem niedliche oder furchteinflößende Bilder, oder verlockende oder Angst machende Formulierungen zum Einsatz. Zum Beispiel kann es sich bei einem Angebot einer zeitnahen Lieferung nur um eine zeitlich begrenzte Garantie handeln, was den Nutzer unter Druck setzen kann, seinen Einkauf zügig abzuschließen. Nachforschungen von Gray zeigen allerdings, dass der Timer neugestartet wird, nachdem die Zeit um ist. 
+
+\subparagraph{False Hierarchy (Gray et al.)}
+erschwert dem Nutzer während eines Dialogs die Interaktion mit bestimmten Optionen oder bestimmte Optionen werden visuell anders dargestellt oder vom Nutzer kaum wahrgenommen. So kann der Nutzer davon ausgehen, dass seine Auswahlmöglichkeiten beschränkt sind oder dass eine bestimmte Option für den Nutzer die bessere ist. Ein Beispiel hierfür ist die Installation von manchen Desktop-Anwendungen, bei der zu Beginn die Optionen einer (empfohlenen) Express-Installation und einer erweiterten, jedoch ausgegrauten Installation aufgelistet werden.
+
+\subparagraph{Disguised Ad (Brignull)}
+versteckt eine Werbung hinter einem Navigationselement oder einem Inhalt, die nicht klar als solche gekennzeichnet ist und den Nutzer anlocken soll.
+Dies kann ein interaktives Spiel, ein Download-Button oder ein anderes hervorstechendes Interaktionselement sein, die den Nutzer dann auf eine andere Seite umleitet.
+
+\subparagraph{Trick Question (Brignull)}
+verwendet eine Frage, die doppelte Negation oder missverständliche Formulierungen enthält. Liest der Nutzer sich die Frage nicht gründlich durch, macht die Frage nur den Anschein, als wäre sie das, was der Nutzer erwartet. Mit diesem Trick wird der Nutzer dazu gebracht, mit seiner Auswahl eine Zustimmung zu geben, die nicht in seinem Interesse ist. 
+
+\subsubsection{Forced Action}
+Der Nutzer muss eine Aktion ausführen, um (weiterhin) Zugang zu bestimmten Funktionen zu bekommen. Oft ist dies verbunden mit einem Vorgang, der nur dann abgeschlossen werden kann. Die obligatorische Aktion kann auch verschleiert werden als etwas, von dem der Nutzer angeblich profitieren würde. 
+Als Beispiel gibt Gray et al. \cite{gray} Windows 10 an, das den Nutzer zwingt, beim Herunterfahren oder Neustarten des Rechners ein Update durchzuführen.  
+
+\paragraph{Social Pyramid (Gray et al.)}
+Ein Service kann erst dann (vollumpfänglich) genutzt werden, wenn der Nutzer andere eingeladen hat. Dies kommt oft bei sozialen Anwendungen oder Online-Games vor. 
+
+Brignull's \glqq Friend Spam\grqq{} steht mit diesem Dark Patterns im Zusammenhang. Hierbei wird der Nutzer nach einer Zugriffsberechtigung für sein E-Mail Konto oder sein Konto auf einem Sozialen Netzwerk gefragt, unter dem Vorwand, ihm einen Vorteil zu verschaffen (wie zum Beispiel das Finden von Freunden zur Erweiterung seines Netzwerks bei diesem Service). Allerdings können die Kontaktdaten missbraucht werden, um im Namen des Nutzers Einladungen zu versenden, ohne dass der Nutzer davon Kenntnis hat.
+Ein bekannt gewordenes Beispiel dafür war LinkedIn, die eine zeitlang von ebendieser Methode Gebrauch gemacht haben, bis sie im Jahr 2015 ein Gerichtsverfahren verloren und diese Methode daraufhin in Kalifornien als illegal erklärt wurde \cite{brignull5}.   
+
+\paragraph{Privacy Zuckering (Brignull)}
+Der Nutzer wird dazu gebracht, mehr persönliche Informationen als gewollt oder notwendig preiszugeben. Diese Informationen werden dann oft an Dritte verkauft. Erst bei Durchsehen der Geschäftsbedingungen oder der Datenschutzerklärung wird dies dem Nutzer gewusst.
+
+\paragraph{Gamification (Gray et al.)}
+Der Nutzer wird zur wiederholten Nutzung des Services gezwungen, damit er mit bestimmten Funktionen des Services belohnt wird. Solange kann er den Service nicht im vollen Umfang benutzen. 
+
+
+\section{Nutzungskontexte von Dark Patterns} % (fold)
+\label{sec:nutzungskontexte_von_dark_patterns}
+Dark Patterns sind inzwischen gut erforscht, und Forschungsteams aus aller Welt verdeutlichen die Relevanz und Risiken für unterschiedliche Nutzungskontexte. Laut Gray et al. existieren verschiedene Dark Patterns Strategien, auf dessen Basis in einem weiteren Paper über 1.200 Online-Shops gefunden werden konnten, die Dark Patterns enthalten \cite{gray}\cite{mathur}. In einer weiteren Studie stellte sich heraus, dass mehr als 95\% der beliebtesten Android Applikationen Dark Patterns verwenden und konnten nachweisen, dass diese Methoden tatsächlich in der Lage dazu sind, Nutzerverhalten zu manipulieren \cite{geronimo}. Auch in Games konnten solche Strategien verschiedenen, Game-spezifischen Kategorien zugeordnet werden \cite{zagal}. Ein weiteres Risiko stellen \glqq Privacy Dark Patterns\grqq{} dar, durch die Nutzer dazu gebracht werden, ihre persönlichen Daten preiszugeben, um diese zu sammeln, zu lagern und zu verarbeiten, ohne dass eine bewusste Zustimmung gegeben wurde \cite{boesch}. 
+
+Doch Dark Patterns beschränken sich nicht nur auf Benutzeroberflächen: auch Künstliche Intelligenz hat das Potential, für solche Zwecke missbraucht zu werden. Dazu wurde
+der Effekt von \glqq Cute Robots\grqq{} auf die Preisgabe von emotionalen Daten der Nutzer analysiert \cite{lacey}. Für Geräte der Proxemischen Interaktion wurde ebenfalls, teilweise anhand von aktuellen und vergangenen Beispielen, Dark Patterns festgelegt und Prognosen angestellt.
+
+Im Folgenden werden verschiedene Nutzungskontexte aufgeführt, in denen Dark Patterns vorkommen. Zum Teil sind die erläuterten Strategien in den von Gray et al. definierten Kategorien wiederzuerkennen, jedoch konnten einige spezifische Dark Patterns gefunden werden, von der nur einzelne Dienste und Technologien betroffen sind.
+
+\subsection{Websites} 
+\label{sub:websites}
+In erster Linie wird in Online-Shops weltweit und auf Sozialen Netzwerken von Dark Patterns Gebrauch gemacht. 
+% Ergänzen!
+
+\subsubsection{Shopping Websites}
+\label{sub:shopping}
+Viele wissenschaftliche Arbeiten haben sich mit der Untersuchung von Marktmanipulation beschäftigt und beschreiben, wie Unternehmen die Beschränkungen der menschlichen Wahrnehmung und die kognitive Verzerrung zu deren Vorteil nutzen können \cite{mathur}\cite{narayanan}. Vor allem im digitalen Bereich sind solche Methoden gut anzuwenden, da es heutzutage möglich ist, Daten über Nutzerverhalten zu erfassen und zu analysieren und somit die Methoden auf Effektivität zu prüfen.\newline\newline
+Mathur et al. erläutert, wie verbreitet Dark Patterns in Online-Shops sind und inwiefern diese Methoden Nutzer beeinflussen und ihnen schaden können. Das Team entwickelte ein Tool, das automatisch Dark Patterns in Online-Shops entdeckt und mithilfe dessen konkrete Ergebnisse und Erkenntnisse ermittelt wurden. Bei der Untersuchung von ungefähr 11.000 beliebten Shopping-Webseiten auf Dark Patterns konnte festgestellt werden, dass 1.254 Webseiten (ca. 11,1\%) über 1.800 Dark Patterns enthalten, von denen 183 Webseiten betrügerische Nachrichten verwenden.\newline\newline     
+Nachfolgend werden die von Mathur et al. festgelegten Kategorien kurz erläutert. Einige Typen von Dark Patterns, die in Online-Shops vorkommen, wurden bereits von Gray et al. beschrieben, demnach werden diese nicht näher erklärt. 
+
+\paragraph{Sneaking}
+siehe Kapitel 2.4.3
+
+\subparagraph{Sneak into Basket}
+\subparagraph{Hidden Costs}
+
+\subparagraph{Hidden Subscription (Mathur et al.)} fällt unter die Kategorie \textit{Sneaking} und taucht oft in Verbindung mit \textit{Hard to Cancel} auf. 
+
+Der Nutzer wird wiederholt zur Kasse gebeten unter dem Vorwand einer einmaligen Gebühr oder einer Probezeit. Dass das Abonnement laufend erneuert wird, fällt dem Nutzer erst nach Empfangen einer Rechnung auf.  
+
+\paragraph{Urgency}
+
+Beim Versuch einer Konversion\footnote{\label{foot:3} Konversion ist...} wird der Kunde dazu gedrängt, eine Kaufentscheidung zu treffen, indem eine Deadline auf Sales oder Schnäppchen gesetzt wird. 
+
+Kombiniert mit \textit{Social Proof} und \textit{Scarcity} kann dies potentiell einen FOMO-Effekt\footnote{\label{foot:4} Fear of Missing Out-Effekt} auslösen.
+
+\subparagraph{Countdown Timers} zeigt bei einem Angebot einen Timer an, der aussagt, wie viel Zeit noch verbleibt, bis eine Deadline verstrichen ist. \textit{Deceptive Countdown Timers} sollen den Nutzer eine Deadline vortäuschen und werden aktiviert, sobald die Seite besucht wird. Bei einem erneutem Besuch oder Aktualisieren der Seite wird der Timer erneut gestartet.
+
+\subparagraph{Limited-time Messages} erzeugt durch die Angabe eines ablaufenden oder befristeten Angebots Zeitdruck beim Nutzer, ohne eine konkrete Deadline zu nennen.
+
+\paragraph{Misdirection}
+Definiert wurde dieses Dark Pattern von Brignull und hat Ähnlichkeit mit Gray's \textit{Interface Interference}.
+Hierbei werden visuelle, sprachliche und emotionale Signale versendet, um den Nutzer zu einer Entscheidung zu bewegen oder von einer Entscheidung abzuhalten. Bestimmte affektive oder kognitive Eigenschaften des Menschen sollen ausgenutzt werden, ohne tatsächlich die Auswahlmöglichkeiten des Nutzers einzuschränken.
+
+\subparagraph{Confirmshaming}
+Der Begriff wurde bereits von Brignull beschrieben und erinnert an Gray's \textit{Toying with Emotions}. 
+Mithilfe von Sprache sollen Emotionen im Nutzer geweckt werden, um den Nutzer von einer Entscheidung abzubringen. Meist geschieht das in Form von Pop-up Dialogen, die den Nutzer mit Rabatten anlocken und zur Eingabe der E-Mail Adresse auffordern. Lehnt der Nutzer das Angebot ab, werden absichtlich Scham-Gefühle oder der Framing-Effekt\footnote{\label{foot:5} Framing-Effekt} ausgelöst.
+
+\subparagraph{Visual Interference}
+Dieses Dark Pattern ist wiederzuerkennen in Gray's \textit{False Hierarchy}. 
+Durch Stil und visuelle Darstellung wird eine Auswahl auffälliger gestaltet als andere Auswahlmöglichkeiten, sodass der Nutzer eher dazu tendiert, eine bestimmte Auswahl zu treffen.
+
+\subparagraph{Trick Question}
+Wie bereits in 2.4.4 im Abschnitt \textit{Interface Interference} erläutert, soll der Nutzer mithilfe von verwirrender Sprache dazu bewegt werden, eine bestimmte Entscheidung oder Auswahl zu treffen. Dies soll verhindern, dass er sich von einem Service (z.B. einem Newsletter) abmeldet. Der Nutzer geht davon aus, dass diese Auswahl seinen Präferenzen entspricht, was sowohl auf den Framing-Effekt, als auch auf den Default-Effekt abzielt.
+
+\subparagraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt\footnote{\label{foot:6} Default-Effekt}, den Anker-Effekt\footnote{\label{foot:7} Anker-Effekt} und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
+
+
+\paragraph{Social Proof}
+Nutzer orientieren sich an dem Verhalten anderer Nutzer. Dies wird ausgenutzt, um die Entscheidungsfindung und Käufe der Nutzer zu beschleunigen (Bandwagon\footnote{\label{foot:5} Bandwagon}-Effekt).
+
+\subparagraph{Activity Notifications} zeigt die Aktivität anderer Nutzer bei einem Artikel an. Folgende Varianten treten dabei (oft in Kombination) auf: 
+\begin{enumerate}[label=\arabic*)]
+	\item{Namen von Nutzern, die dieses Produkt ebenfalls gekauft haben,}
+	\item{Wie viele Nutzer dieses Produkt im Einkaufswagen liegen haben,}
+	\item{Wie viele Nutzer sich dieses Produkt angeschaut haben.}
+\end{enumerate}
+Dies soll Aufmerksamkeit erzeugen und taucht oft regelmäßig auf, ohne dass sich die numerischen Werte verändern. \textit{Deceptive Activity Notifications} generiert falsche, zufällige Nummern oder verwendet andere täuschende Aussagen durch die Erzeugung fester Werte.
+
+\subparagraph{Testimonials of Uncertain Origin} listet Nutzer-Empfehlungen und -Bewertungen von einem Produkt auf, bei denen nicht genau nachvollziehbar ist, woher sie stammen oder wie sie erstellt oder mitgeteilt wurden. 
+
+\paragraph{Scarcity}
+Zeigt für ein Produkt eine begrenzte Verfügbarkeit oder eine starke Nachfrage an. So kann der Wert des Produkts aus Sicht des Nutzers und der Wunsch nach ebendiesem Produkt erhöht werden.
+
+\subparagraph{Low-stock Messages} signalisiert dem Nutzer, dass nur noch eine begrenzte Anzahl eines Produkts verfügbar ist. Dies kann zu Unsicherheit, einem erhöhten Wunsch nach einem Produkt und zu Impulskäufen führen. \textit{Deceptive Low-stock Messages} gibt Auskunft über einen verringerten Vorrat eines Produkts, wobei der angegebene Wert immer wiederkehrt und fest geplant ist. Es kann auch eine zufällige Nummer generiert werden, sobald die Seite neu geladen wird. 
+
+\subparagraph{High-demand Messages} zeigt dem Nutzer die Begehrtheit eines Produkts an. So bekommt er den Eindruck vermittelt, dass das Produkt wahrscheinlich bald ausverkauft sein wird. Manchmal werden diese Werte jedoch willkürlich festgelegt und erscheinen beim Neuladen der Seite oder beim Betrachten eines anderen Produkts immer wieder.
+
+\subparagraph{Hard to Cancel (Mathur et al.)} zählt zu \textit{Obstruction} und ähnelt Brignull's Beschreibung von \textit{Roach Motel}. 
+
+Dem Nutzer ist nicht bewusst, dass er Mitglied oder Service-Abonnent geworden ist. Oft wird dem Nutzer das Gefühl vermittelt, jederzeit kündigen zu können, jedoch stellt sich dann beim Lesen der Geschäftsbedingungen heraus, dass man dies nur über einen umständlichen Weg, wie einem Anruf beim Kundenservice, bewerkstelligen kann. 
+
+\paragraph{Forced Action}
+siehe 2.4.5 \textit{Forced Action} definiert von Gray et al.
+
+\subparagraph{Forced Enrollment}
+Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. Newsletter) anzumelden oder ein Konto anzulegen, um ihn zur Preisgabe von Informationen
+
+
+\subsubsection{Soziale Netzwerke}
+\label{sub:soziale_netzwerke}
+
+\subsection{Desktop-Software}
+\label{sub:desktop-software}
+
+\subsection{Mobile Anwendungen}
+\label{sub:mobile_anwendungen}
+
+\subsection{Privacy Dark Patterns}
+\label{sub:privacy_dark_patterns}
+
+\paragraph{Immortal Accounts (Bösch et al.)}
+% Obstruction
+Dem Nutzer wird es erschwert oder sogar unmöglich gemacht, sein Konto zu löschen. Zudem kann die Löschung vorgetäuscht werden, während in Wirklichkeit (einige) persönliche Daten behalten werden. Letztendlich können die Barrieren dazu führen, dass der Nutzer sich dagegen entscheidet, sein Konto zu löschen, um sich unnötige Mühen zu ersparen. 
+
+\paragraph{Hidden Legalese Stipulations}
+% Interface Interference
+Geschäftsbedingungen sind oft zu lang gestaltet und schwer verständlich formuliert. Aufgrund dessen lesen viele Nutzer diese nicht, wodurch er angreifbar wird, wenn er den Bedingungen dennoch zustimmt. Denn es können Klauseln in den Geschäftsbedingungen versteckt sein und oftmals ohne Vorankündigung verändert werden.  
+
+\paragraph{Bad Defaults}
+% Interface Interference
+Standard-Optionen werden so gesetzt, dass der Nutzer dazu angeregt werden soll, seine persönlichen Informationen mit dem Service zu teilen. Die meisten Menschen haben keine Zeit, um alle Konfigurationen zur Privatsphäre durchzugehen und an seine Bedürfnisse anzupassen. Infolgedessen geben Nutzer oft mehr über sich preis, als sie beabsichtigen, wie Informationen über den Online-Status, Teile des Nutzerprofils oder Seitenbesuche. Dieses Dark Pattern wird meistens verwendet auf Web- und mobilen Applikationen, vor allem in Sozialen Netzwerken.  
+
+% Forced Action
+% - Privacy Zuckering
+
+\paragraph{Address Book Leeching}
+
+\paragraph{Shadow User Profiles}
+
+
+
+\subsection{Games}
+\label{sub:games}
+
+\paragraph{Temporal Dark Patterns}
+
+\subparagraph{Grinding}
+
+\subparagraph{Playing by Appointment}
+
+\paragraph{Monetary Dark Patterns}
+
+\subparagraph{Pay to Skip}
+
+\subparagraph{Pre-Delivered Content}
+
+\subparagraph{Monetized Rivalries}
+
+\paragraph{Social Capital-Based Dark Patterns}
+
+\subparagraph{Social Pyramid Schemes}
+
+\subparagraph{Impersonation}
+
+\subsubsection{Proxemische Interaktions-Systeme}
+\label{sub:proxemische_interaktions-systeme}
+
+\paragraph*{The Captive Audience}
+
+\paragraph{The Attention Grabber}
+
+\paragraph{Bait and Switch}
+
+\paragraph{Making Personal Information Public}
+
+\paragraph{We Never Forget}
+
+\paragraph{Disguised Data Collection}
+
+\paragraph{The Social Network of Proxemic Contacts or Unintended Relationships}
+
+\paragraph{The Milk Factor}
+
+\subsection{Künstliche Intelligenz}
+\label{sub:kuenstliche_intelligenz}
+
+\subsubsection{Home Robots}
+\label{sub:home_robots}
+
+\section{Schluss}
+\label{sec:schluss}
+
+\subsection{Ausblick}
+\label{sub:ausblick}
+
+\subsection{Fazit}
+\label{sub:fazit}
+
+
+\newpage
+
+
+\printbibliography
+
+%\bibliography{Referenzen}
+
+%\bibliographystyle{natdin}
+	%\bibliography{references} % expects file "references.bib"
+	%\addcontentsline{toc}{section}{References}
+\end{document}
