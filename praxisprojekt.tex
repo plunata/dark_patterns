@@ -12,6 +12,10 @@
 \usepackage{doi}
 \usepackage{url}
 \usepackage[automark,headsepline]{scrlayer-scrpage}
+\usepackage{color}
+
+\definecolor{purple}{RGB}{148, 82, 165}
+\newcommand{\todo}[1]{{\color{purple}{#1}}}
 
 \hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 
@@ -54,11 +58,9 @@
 	}
 	
 	\vspace{1cm}
+
 	
-	% if you are the only author, you might use the following
-	% \author{Name of student}	
-	
-	% Insert here your name and correct mail address
+
 	\author{\Large \href{mailto:natalie.tork_alinaghipour@smail.th-koeln.de}{Natalie Tork Alinaghipour} 
 	\vspace{1cm}}
 	
@@ -76,7 +78,6 @@
 
 \vspace{2cm}
 \begin{abstract}
-
 
 
 \end{abstract}
@@ -108,29 +109,27 @@ Zudem hat die Datenschutz-Grundverordnung dazu geführt, dass die Bedingungen de
 Aus den oben genannten Gründen weist das Thema auch eine hohe politische Relevanz auf, da es von großer Notwendigkeit ist, Verbraucher:innen durch sinnvolle Maßnahmen vor alldem zu schützen und sie auf Dark Patterns aufmerksam zu machen.
 
 
-%bla blubb \cite{einstein}.
-
-\section{Hintergrund} % (fold)
+\section{Hintergrund}
 \label{sec:hintergrund}
 
 
-\subsection{Über Dark Patterns} % (fold)
+\subsection{Über Dark Patterns} 
 \label{sub:die_hintergruende_der_dark_patterns}
 
 
-\subsection{Versteckte Geschäftsmodelle} % (fold)
+\subsection{Versteckte Geschäftsmodelle} 
 \label{sub:versteckte_geschaeftsmodelle}
 
 
-\subsubsection{Stakeholder} % (fold)
+\subsubsection{Stakeholder}
 \label{sub:stakeholder}
 
 
-\subsection{Zielgruppen der Dark Patterns} % (fold)
+\subsection{Zielgruppen der Dark Patterns} 
 \label{sub:zielgruppen_der_dark_patterns}
 
 
-\subsection{Allgemeine Dark Patterns Kategorien nach Gray} % (fold)
+\subsection{Allgemeine Dark Patterns Kategorien nach Gray}
 \label{sub:dark_patterns_kategorien}
 Der Ausdruck \glqq Dark Patterns\grqq{} stammt von Harry Brignull, der sich noch heute aktiv gegen diese Methoden in digitalen Produkten einsetzt und als Sachverständiger in dem Bereich agiert. Zudem führt er zusammen mit Alexander Darlington\footnote{\label{foot:2} Alexander Darlington ist im Bereich UX Research bei Aviva in Großbritannien tätig und betreibt Forschung in Ethischem Design.} die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}. Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien eingeteilt, die die Strategien und Motivation dahinter zusammenfasst \cite{gray}. 
 Im Folgenden wird erläutert, was unter den einzelnen Kategorien zu verstehen ist und wie die Taxonomie von Brignull in diese einzuordnen ist. Diese Praktiken finden allgemein in der Gestaltung von digtalen Benutzeroberflächen Anwendung.
@@ -243,7 +242,10 @@ Nachfolgend werden die von Mathur et al. festgelegten Kategorien kurz erläutert
 siehe Kapitel 2.4.3
 
 \subparagraph{Sneak into Basket}
+siehe gleichnamigen Abschnitt unter Kapitel 2.4.3
+
 \subparagraph{Hidden Costs}
+siehe gleichnamigen Abschnitt unter Kapitel 2.4.3
 
 \subparagraph{Hidden Subscription (Mathur et al.)} fällt unter die Kategorie \textit{Sneaking} und taucht oft in Verbindung mit \textit{Hard to Cancel} auf. 
 
@@ -305,8 +307,7 @@ Dem Nutzer ist nicht bewusst, dass er Mitglied oder Service-Abonnent geworden is
 siehe 2.4.5 \textit{Forced Action} definiert von Gray et al.
 
 \subparagraph{Forced Enrollment}
-Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. Newsletter) anzumelden oder ein Konto anzulegen, um ihn zur Preisgabe von Informationen
-
+Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. Newsletter) anzumelden oder ein Konto anzulegen, um ihn zur Preisgabe von Informationen zu verleiten. So muss er mit der Zustimmung der Geschäftsbedingungen auch dem Empfang von Marketing-E-Mails erlauben. Meistens werden dafür Checkboxen verwendet.
 
 \subsubsection{Soziale Netzwerke}
 \label{sub:soziale_netzwerke}
@@ -316,6 +317,16 @@ Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. News
 
 \subsection{Mobile Anwendungen}
 \label{sub:mobile_anwendungen}
+Der Großteil der hier vorkommenden Dark Patterns stimmen mit Gray's Kategorien überein. Bei einigen Fällen mussten Geronimo et al. jedoch einschätzen, in welche Kategorie diese hineinpassen \cite{geronimo}.
+
+Für einzelne Kategorien werden Beispiele aufgezählt, die in Mobilen Apps Verwendung finden. Nicht berücksichtigt werden konnten allerdings Forced Continuity und Gamification, da Geronimo et al. dafür eine Langzeitstudie hätten durchführen müssen.\newline
+\begin{figure}[h]
+ \includegraphics[width=15cm,height=13cm]{"dark_patterns_mobile_ui2"}
+ \caption{Meine Grafik}
+ \label{fig:meine-grafik}
+\end{figure}
+
+
 
 \subsection{Privacy Dark Patterns}
 \label{sub:privacy_dark_patterns}
@@ -333,12 +344,14 @@ Geschäftsbedingungen sind oft zu lang gestaltet und schwer verständlich formul
 Standard-Optionen werden so gesetzt, dass der Nutzer dazu angeregt werden soll, seine persönlichen Informationen mit dem Service zu teilen. Die meisten Menschen haben keine Zeit, um alle Konfigurationen zur Privatsphäre durchzugehen und an seine Bedürfnisse anzupassen. Infolgedessen geben Nutzer oft mehr über sich preis, als sie beabsichtigen, wie Informationen über den Online-Status, Teile des Nutzerprofils oder Seitenbesuche. Dieses Dark Pattern wird meistens verwendet auf Web- und mobilen Applikationen, vor allem in Sozialen Netzwerken.  
 
 % Forced Action
-% - Privacy Zuckering
+\paragraph{Privacy Zuckering}
+siehe \textit{Forced Action} in Abschnitt 2.4.5
 
 \paragraph{Address Book Leeching}
+Der Nutzer wird nach Zugriffsrechten auf sein Adressbuch gefragt, damit er sich mit seinen Kontakten verbinden kann. Jedoch werden die Kontaktdaten intern gespeichert und für die Weiterverarbeitung genutzt, ohne dass der Nutzer darüber in Kenntnis gesetzt wird. Die Kontakte erhalten Einladungen oder Werbung, die oft im Namen des Nutzers versendet werden. Die Daten können auch genutzt werden, Profile zu erstellen und Individuen zu tracken.
 
 \paragraph{Shadow User Profiles}
-
+Daten über unregistrierte Personen können ohne ihre Zustimmung und ihr Wissen gesammelt und aufgezeichnet werden. Diese Informationen erhält der Dienstleister von importierten Adressbüchern registrierter Nutzer (z.B. via \textit{Address Book Leeching}), Metadaten oder Erwähnungen und können dazu genutzt werden, um Algorithmen zu verbessern, wie die Empfehlung von Kontakten oder Ad Targeting.
 
 
 \subsection{Games}
@@ -365,9 +378,14 @@ Standard-Optionen werden so gesetzt, dass der Nutzer dazu angeregt werden soll, 
 \subparagraph{Impersonation}
 
 \subsubsection{Proxemische Interaktions-Systeme}
-\label{sub:proxemische_interaktions-systeme}
+\label{sub:proxemische_interaktions-systeme}{}
+Die Proxemik ist ein Forschungsgebiet, 
+Der Begriff der \textit{Proxemik} wurde vom Anthropologen Edward T. Hall im Jahr 1960 vorgestellt und umfasst die Theorie über non-verbale Kommunikationswege, die erklärt, wie Menschen ihre Umgebung wahrnehmen und nutzen, {}um Kommunikationsziele zu erreichen \cite{communicationstudies}. Der Theorie zufolge ist die physische Distanz zu anderen abhängig davon, in welcher Beziehung die Kommunikationspartner zueinander stehen. Laut S. Greenberg \glqq \textit{kann diese Erwartungshaltung des Menschen gegenüber der Proxemik für Interaktionsdesign genutzt werden, um die Interaktion zwischen Mensch und [digitalen] Geräten in einer Ubicomp-Umgebung \todo{Schönere Bezeichnung finden oder Definition formulieren} zu beeinflussen. So wie die Menschen zunehmendes Engagement und Intimität erwarten, wenn sie auf andere zugehen, so sollten sie es auch als natürlich empfinden, dass die Konnektivität und Interaktionsmöglichkeiten zunehmen, wenn sie selbst und ihre Geräte sich in unmittelbarer Nähe zueinander befinden. Dies wird als Proxemische Interaktion bezeichnet.}\grqq{} \cite{marquardt}\newline
+Greenberg et al. erstellten eine Prognose, wie diese Technologie potentiell missbraucht werden könnte \cite{greenberg}. Nachfolgend wird diese zusammenfassend erläutert.
 
-\paragraph*{The Captive Audience}
+\paragraph{The Captive Audience}
+Eine Technologie wird im Raum strategisch platziert und nutzt die Gelegenheit der \glqq Gefangenschaft\grqq{} von Personen zu eigenen Zwecken aus, die an einem bestimmten Ort ein Ziel erreichen möchten, welches eine gewisse Zeit in Anspruch nimmt. So müssen Menschen beim Aufsuchen eines Ortes zur Durchführung einer Routine hinnehmen, dass das System eine unaufgeforderte und möglicherweise ungewollte Aktion ausführt.\newline
+Beispiele umfassen unter anderem Spiegelflächen-Werbung in öffentlichen Toiletten und öffentliche Werbeflächen. Ein weiteres Beispiel ist ein Projekt der Werbeagentur BBDO und dem Sender Sky Go, die einen Prototypen entwickelten, das über hochfrequentige Vibrationen Audio-Werbung für Pendler abspielt, sobald diese ihren Kopf an das Zugfenster lehnen\cite{zugfenster_ad}.  
 
 \paragraph{The Attention Grabber}
 
