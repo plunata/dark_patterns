@@ -41,7 +41,7 @@
 
 \setcounter{secnumdepth}{4}
 %section depth (value steht fuer Stellen); bei 4 werden die Paragraphen durchnummeriert
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{2}
 %table of content depth
 
 
@@ -68,7 +68,7 @@
 	\date{
 	\large Praxisprojekt Wintersemester 2020/2021 \\ 
 	\vspace{0.8cm}
-	\large Betreuuer: Prof. Gerhard Hartmann \\
+	\large Betreuer: Prof. Gerhard Hartmann \\
 	\vspace{1cm}
 	\today
 	}
@@ -96,11 +96,11 @@ Diese Taktiken werden als "Dark Patterns" bezeichnet und werden bereits ethisch 
 
 \subsection{Ist-Zustand}
 \label{sub:ist-zustand}
-Der Begriff "Dark Patterns" wurde von dem UX-Experten Harry Brignull geprägt, als er im Jahr 2010 einen Blog-Beitrag veröffentlichte \cite{brignull1} und kurze Zeit später einen Vortrag auf der UX Brighton Conference hielt. Inzwischen wurden bereits verschiedene Paper über das Thema verfasst, die verschiedene Nutzungskontexte beschreiben. Da demnach viele unterschiedliche Technologien Dark Patterns enthalten, ist der Themenbereich recht unübersichtlich und komplex, wodurch eine ausführliche Recherche notwendig ist.
+Der Begriff \textit{Dark Patterns} wurde von dem UX-Experten Harry Brignull geprägt, als er im Jahr 2010 einen Blog-Beitrag veröffentlichte \cite{brignull1} und kurze Zeit später einen Vortrag auf der UX Brighton Conference hielt. Inzwischen wurden bereits einige Paper über das Thema verfasst, die verschiedene Nutzungskontexte beschreiben. Da demnach viele unterschiedliche Technologien Dark Patterns enthalten, ist der Themenbereich recht unübersichtlich und komplex, wodurch eine ausführliche Recherche notwendig ist.
 
 \subsection{Ziel und Lösungsansatz}
 \label{sub:ziel_und_loesungsansatz}
-Das Ziel soll es sein, eine Übersicht in das Themenkomplex Dark Patterns zu bringen, indem diese nach Systemen strukturiert wird. Es soll analysiert werden, welche Dark Patterns zu den jeweiligen Nutzungskontexten existieren und welche versteckten Geschäftsmodelle dahinterstecken. Ebenso gilt es herauszufinden, welche Zielgruppe von diesen Methoden betroffen sind und wer die Stakeholder sind. 
+Das Ziel soll es sein, eine Übersicht in das Themenkomplex Dark Patterns zu bringen, indem diese nach Systemen strukturiert werden. Es soll analysiert werden, welche Dark Patterns zu den jeweiligen Nutzungskontexten existieren und welche versteckten Geschäftsmodelle dahinterstecken. Ebenso gilt es herauszufinden, welche Zielgruppe von diesen Methoden betroffen sind und wer die Stakeholder sind. 
 
 \subsection{Motivation}
 \label{motivation}
@@ -131,7 +131,7 @@ Aus den oben genannten Gründen weist das Thema auch eine hohe politische Releva
 
 \subsection{Allgemeine Dark Patterns Kategorien nach Gray}
 \label{sub:dark_patterns_kategorien}
-Der Ausdruck \glqq Dark Patterns\grqq{} stammt von Harry Brignull, der sich noch heute aktiv gegen diese Methoden in digitalen Produkten einsetzt und als Sachverständiger in dem Bereich agiert. Zudem führt er zusammen mit Alexander Darlington\footnote{\label{foot:2} Alexander Darlington ist im Bereich UX Research bei Aviva in Großbritannien tätig und betreibt Forschung in Ethischem Design.} die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}. Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien eingeteilt, die die Strategien und Motivation dahinter zusammenfasst \cite{gray}. 
+Der Ausdruck Dark Patterns stammt von Harry Brignull, der sich noch heute aktiv gegen diese Methoden in digitalen Produkten einsetzt und als Sachverständiger in dem Bereich agiert. Zudem führt er zusammen mit Alexander Darlington\footnote{\label{foot:2} Alexander Darlington ist im Bereich UX Research bei Aviva in Großbritannien tätig und betreibt Forschung in Ethischem Design.} die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}. Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien eingeteilt, die die Strategien und Motivation dahinter zusammenfasst \cite{gray}. 
 Im Folgenden wird erläutert, was unter den einzelnen Kategorien zu verstehen ist und wie die Taxonomie von Brignull in diese einzuordnen ist. Diese Praktiken finden allgemein in der Gestaltung von digtalen Benutzeroberflächen Anwendung.
 
 \subsubsection{Nagging}
@@ -150,6 +150,7 @@ Führt den Nutzer auf einen langen Pfad und ruft gleichzeitig eine Disorientieru
 
 \paragraph{Price Comparison Prevention (Brignull)} 
 Hindert den Nutzer daran, Preise von Produkten und Dienstleistungen zu vergleichen. Dies kann zum Beispiel der Fall sein, wenn es dem Nutzer nicht möglich ist, Produktinformationen zu kopieren, um damit Suchanfragen stellen zu können.
+% Kommentar von Dome: Außerdem: Andere Dinge zum Kauf hinzufügen. Also "Sets" anbieten. Bsp: Kaufst x, kriegst aber y dazu. Bei anderem Anbieter x aber z zusätzlich.
 
 \paragraph{Intermediate Currency (Gray et al.)} 
 Der Nutzer wird gezwungen, echtes Geld in eine virtuelle Währung zu investieren, damit er Käufe tätigen kann. Oft kommt dies in Apps vor, die In-App Käufe anbieten.
@@ -168,13 +169,12 @@ Dem Nutzer wird ohne sein Wissen automatisch ein Artikel in den Warenkorb gelegt
 
 \paragraph{Bait and Switch (Brignull)}
 Gewohnte Interaktionselemente einer Applikation führen zu einem unerwarteten und unerwünschten Ergebnis. 
-Für Aufsehen sorgte beispielsweise Microsoft im Jahr 2016, als Nutzer von älteren Windows-Versionen dazu gedrängt wurden, das Betriebssystem auf Windows 10 zu aktualisieren \cite{thurrott}. Ein Schließen der Meldung durch das "X"-Button führte zwar zum Schließen des Fensters, allerdings war den Nutzern nicht bewusst, dass sie dabei gegen ein Upgrade auf Windows 10 keinen Widerspruch eingelegt haben. Daraufhin wurde bei diesen Nutzern zu einem von Windows festgelegten Zeitpunkt das Upgrade durchgeführt. 
+Für Aufsehen sorgte beispielsweise Microsoft im Jahr 2016, als Nutzer von älteren Windows-Versionen dazu gedrängt wurden, das Betriebssystem auf Windows 10 zu aktualisieren \cite{thurrott}. Ein Schließen der Meldung durch den entsprechenden Button führte zwar zum Schließen des Fensters, allerdings war den Nutzern nicht bewusst, dass sie dabei gegen ein Upgrade auf Windows 10 keinen Widerspruch eingelegt haben. Daraufhin wurde bei diesen Nutzern zu einem von Windows festgelegten Zeitpunkt das Upgrade durchgeführt. 
 %Bild von Windows 10 Upgrade einfügen?
 
 \subsubsection{Interface Interference}
 Sobald bestimmte Aktionen, die überdeckt werden von anderen Aktionen, den Nutzer bei der Erledigung seiner Aufgaben stören oder die Sichtbarkeit von Aktionen oder Informationen beschränken, spricht man von Interface Interference. 
-Gray \cite{gray} unterscheidet dabei zwischen Hidden Information, Preselection und Aesthetic Manipulation. 
-
+Gray \cite{gray} unterscheidet dabei zwischen \textit{Hidden Information}, \textit{Preselection} und \textit{Aesthetic Manipulation}. 
 
 \paragraph{Hidden Information}
 Sorgt dafür, dass wichtige Informationen nur schwer auffindbar und lesbar sind. Demnach bekommt der Nutzer das Gefühl vermittelt, als seien die Informationen für ihn nicht von Bedeutung. Oft sind diese dargestellt als Optionen oder als Kleingedrucktes, verblasster Text oder in Form von schwer verständlichen Geschäfts-bedingungen.
@@ -184,15 +184,15 @@ Eine Option in einem Dialog ist von Anfang an ausgewählt, noch bevor der Nutzer
  
 \paragraph{Aesthetic Manipulation (Gray et al.)}
 Die Form der Benutzeroberfläche wird so gestaltet, dass die Aufmerksamkeit des Nutzers auf etwas anderes gelenkt oder dass er von etwas anderem überzeugt wird. Brignull hat dieses Dark Pattern als \glqq Misdirection\grqq{} bezeichnet. 
-Darunter fallen die Dark Patterns Toying with emotions, False Hierarchy, Disguised Ad und Trick Question.\newline
+Darunter fallen die Dark Patterns \textit{Toying with Emotions}, \textit{False Hierarchy}, \textit{Disguised Ad} und \textit{Trick Question}.\newline
 
-%\subparagraph{Toying with Emotions (Gray et al.)} 
 %Stichpunkte stattdessen verwenden!
-\hspace*{2em}\textbf{Toying with Emotions (Gray et al.)}\newline
-setzt Elemente wie Farben, Sprache oder Schreibstil gezielt dafür ein, Emotionen hervorzurufen, um den Nutzer dazu zu bringen, eine bestimmte Aktion auszuführen. Hier kommen unter anderem niedliche oder furchteinflößende Bilder, oder verlockende oder Angst machende Formulierungen zum Einsatz. Zum Beispiel kann es sich bei einem Angebot einer zeitnahen Lieferung nur um eine zeitlich begrenzte Garantie handeln, was den Nutzer unter Druck setzen kann, seinen Einkauf zügig abzuschließen. Nachforschungen von Gray zeigen allerdings, dass der Timer neugestartet wird, nachdem die Zeit um ist. 
+%\hspace*{2em}\textbf{Toying with Emotions (Gray et al.)}\newline
+\subparagraph{Toying with Emotions (Gray et al.)} 
+setzt Elemente wie Farben, Sprache oder Schreibstil gezielt dafür ein, Emotionen hervorzurufen, um den Nutzer dazu zu bringen, eine bestimmte Aktion auszuführen. Hier kommen unter anderem niedliche \todo{zu viel oder XD} oder furchteinflößende Bilder, oder verlockende oder Angst machende Formulierungen zum Einsatz. Zum Beispiel kann es sich bei einem Angebot einer zeitnahen Lieferung nur um eine zeitlich begrenzte Garantie handeln, was den Nutzer unter Druck setzen kann, seinen Einkauf zügig abzuschließen. Nachforschungen von Gray zeigen allerdings, dass der Timer oft neugestartet wird, nachdem die Zeit um ist. 
 
 \subparagraph{False Hierarchy (Gray et al.)}
-erschwert dem Nutzer während eines Dialogs die Interaktion mit bestimmten Optionen oder bestimmte Optionen werden visuell anders dargestellt oder vom Nutzer kaum wahrgenommen. So kann der Nutzer davon ausgehen, dass seine Auswahlmöglichkeiten beschränkt sind oder dass eine bestimmte Option für den Nutzer die bessere ist. Ein Beispiel hierfür ist die Installation von manchen Desktop-Anwendungen, bei der zu Beginn die Optionen einer (empfohlenen) Express-Installation und einer erweiterten, jedoch ausgegrauten Installation aufgelistet werden.
+erschwert dem Nutzer während eines Dialogs die Interaktion mit bestimmten Optionen oder bestimmte Optionen werden visuell anders dargestellt und vom Nutzer kaum wahrgenommen. So kann der Nutzer davon ausgehen, dass seine Auswahlmöglichkeiten beschränkt sind oder dass eine bestimmte Option für den Nutzer die bessere ist. Ein Beispiel hierfür ist die Installation von manchen Desktop-Anwendungen, bei der zu Beginn die Optionen einer (empfohlenen) Express-Installation und einer erweiterten, jedoch ausgegrauten Installation aufgelistet werden.
 
 \subparagraph{Disguised Ad (Brignull)}
 versteckt eine Werbung hinter einem Navigationselement oder einem Inhalt, die nicht klar als solche gekennzeichnet ist und den Nutzer anlocken soll.
@@ -208,11 +208,11 @@ Als Beispiel gibt Gray et al. \cite{gray} Windows 10 an, das den Nutzer zwingt, 
 \paragraph{Social Pyramid (Gray et al.)}
 Ein Service kann erst dann (vollumpfänglich) genutzt werden, wenn der Nutzer andere eingeladen hat. Dies kommt oft bei sozialen Anwendungen oder Online-Games vor. 
 
-Brignull's \glqq Friend Spam\grqq{} steht mit diesem Dark Patterns im Zusammenhang. Hierbei wird der Nutzer nach einer Zugriffsberechtigung für sein E-Mail Konto oder sein Konto auf einem Sozialen Netzwerk gefragt, unter dem Vorwand, ihm einen Vorteil zu verschaffen (wie zum Beispiel das Finden von Freunden zur Erweiterung seines Netzwerks bei diesem Service). Allerdings können die Kontaktdaten missbraucht werden, um im Namen des Nutzers Einladungen zu versenden, ohne dass der Nutzer davon Kenntnis hat.
+Brignull's \textit{Friend Spam} steht mit diesem Dark Patterns im Zusammenhang. Hierbei wird der Nutzer nach einer Zugriffsberechtigung für sein E-Mail Konto oder sein Konto auf einem Sozialen Netzwerk gefragt, unter dem Vorwand, ihm einen Vorteil zu verschaffen (wie zum Beispiel das Finden von Freunden zur Erweiterung seines Netzwerks bei diesem Service). Allerdings können die Kontaktdaten missbraucht werden, um im Namen des Nutzers Einladungen zu versenden, ohne dass der Nutzer davon Kenntnis hat.
 Ein bekannt gewordenes Beispiel dafür war LinkedIn, die eine zeitlang von ebendieser Methode Gebrauch gemacht haben, bis sie im Jahr 2015 ein Gerichtsverfahren verloren und diese Methode daraufhin in Kalifornien als illegal erklärt wurde \cite{brignull5}.   
 
 \paragraph{Privacy Zuckering (Brignull)}
-Der Nutzer wird dazu gebracht, mehr persönliche Informationen als gewollt oder notwendig preiszugeben. Diese Informationen werden dann oft an Dritte verkauft. Erst bei Durchsehen der Geschäftsbedingungen oder der Datenschutzerklärung wird dies dem Nutzer gewusst.
+Der Nutzer wird dazu gebracht, mehr persönliche Informationen als gewollt oder notwendig preiszugeben. Diese Informationen werden dann oft an Dritte verkauft. Erst bei Durchsehen der Geschäftsbedingungen oder der Datenschutzerklärung wird dies dem Nutzer bewusst.
 
 \paragraph{Gamification (Gray et al.)}
 Der Nutzer wird zur wiederholten Nutzung des Services gezwungen, damit er mit bestimmten Funktionen des Services belohnt wird. Solange kann er den Service nicht im vollen Umfang benutzen. 
@@ -220,69 +220,65 @@ Der Nutzer wird zur wiederholten Nutzung des Services gezwungen, damit er mit be
 
 \section{Nutzungskontexte von Dark Patterns} % (fold)
 \label{sec:nutzungskontexte_von_dark_patterns}
-Dark Patterns sind inzwischen gut erforscht, und Forschungsteams aus aller Welt verdeutlichen die Relevanz und Risiken für unterschiedliche Nutzungskontexte. Laut Gray et al. existieren verschiedene Dark Patterns Strategien, auf dessen Basis in einem weiteren Paper über 1.200 Online-Shops gefunden werden konnten, die Dark Patterns enthalten \cite{gray}\cite{mathur}. In einer weiteren Studie stellte sich heraus, dass mehr als 95\% der beliebtesten Android Applikationen Dark Patterns verwenden und konnten nachweisen, dass diese Methoden tatsächlich in der Lage dazu sind, Nutzerverhalten zu manipulieren \cite{geronimo}. Auch in Games konnten solche Strategien verschiedenen, Game-spezifischen Kategorien zugeordnet werden \cite{zagal}. Ein weiteres Risiko stellen \glqq Privacy Dark Patterns\grqq{} dar, durch die Nutzer dazu gebracht werden, ihre persönlichen Daten preiszugeben, um diese zu sammeln, zu lagern und zu verarbeiten, ohne dass eine bewusste Zustimmung gegeben wurde \cite{boesch}. 
+Dark Patterns sind inzwischen gut erforscht, und Forschungsteams aus aller Welt verdeutlichen die Relevanz und Risiken für unterschiedliche Nutzungskontexte. Laut Gray et al. existieren verschiedene Dark Patterns Strategien, auf dessen Basis in einem weiteren Paper über 1.200 Online-Shops gefunden werden konnten, die Dark Patterns enthalten \cite{gray}\cite{mathur}. In einer weiteren Studie stellte sich heraus, dass mehr als 95\% der beliebtesten Android Applikationen Dark Patterns verwenden und konnten nachweisen, dass diese Methoden tatsächlich in der Lage dazu sind, Nutzerverhalten zu manipulieren \cite{geronimo}. Auch in Games konnten solche Strategien verschiedenen, Game-spezifischen Kategorien zugeordnet werden \cite{zagal}. Ein weiteres Risiko stellen \textit{Privacy Dark Patterns} dar, durch die Nutzer dazu gebracht werden, ihre persönlichen Daten preiszugeben, damit diese von einem Dienstleister gesammelt, gelagert und verarbeitet werden können, ohne dass eine bewusste Zustimmung gegeben wurde \cite{boesch}. 
 
 Doch Dark Patterns beschränken sich nicht nur auf Benutzeroberflächen: auch Künstliche Intelligenz hat das Potential, für solche Zwecke missbraucht zu werden. Dazu wurde
 der Effekt von \glqq Cute Robots\grqq{} auf die Preisgabe von emotionalen Daten der Nutzer analysiert \cite{lacey}. Für Geräte der Proxemischen Interaktion wurde ebenfalls, teilweise anhand von aktuellen und vergangenen Beispielen, Dark Patterns festgelegt und Prognosen angestellt.
 
 Im Folgenden werden verschiedene Nutzungskontexte aufgeführt, in denen Dark Patterns vorkommen. Zum Teil sind die erläuterten Strategien in den von Gray et al. definierten Kategorien wiederzuerkennen, jedoch konnten einige spezifische Dark Patterns gefunden werden, von der nur einzelne Dienste und Technologien betroffen sind.
 
-\subsection{Websites} 
-\label{sub:websites}
-In erster Linie wird in Online-Shops weltweit und auf Sozialen Netzwerken von Dark Patterns Gebrauch gemacht. 
-% Ergänzen!
 
-\subsubsection{Shopping Websites}
+\subsection{Shopping Websites}
 \label{sub:shopping}
 Viele wissenschaftliche Arbeiten haben sich mit der Untersuchung von Marktmanipulation beschäftigt und beschreiben, wie Unternehmen die Beschränkungen der menschlichen Wahrnehmung und die kognitive Verzerrung zu deren Vorteil nutzen können \cite{mathur}\cite{narayanan}. Vor allem im digitalen Bereich sind solche Methoden gut anzuwenden, da es heutzutage möglich ist, Daten über Nutzerverhalten zu erfassen und zu analysieren und somit die Methoden auf Effektivität zu prüfen.\newline\newline
 Mathur et al. erläutert, wie verbreitet Dark Patterns in Online-Shops sind und inwiefern diese Methoden Nutzer beeinflussen und ihnen schaden können. Das Team entwickelte ein Tool, das automatisch Dark Patterns in Online-Shops entdeckt und mithilfe dessen konkrete Ergebnisse und Erkenntnisse ermittelt wurden. Bei der Untersuchung von ungefähr 11.000 beliebten Shopping-Webseiten auf Dark Patterns konnte festgestellt werden, dass 1.254 Webseiten (ca. 11,1\%) über 1.800 Dark Patterns enthalten, von denen 183 Webseiten betrügerische Nachrichten verwenden.\newline\newline     
-Nachfolgend werden die von Mathur et al. festgelegten Kategorien kurz erläutert. Einige Typen von Dark Patterns, die in Online-Shops vorkommen, wurden bereits von Gray et al. beschrieben, demnach werden diese nicht näher erklärt. 
+Nachfolgend werden die von Mathur et al. festgelegten Kategorien kurz erläutert. Einige Typen von Dark Patterns, die in Online-Shops vorkommen, wurden bereits von Gray et al. beschrieben, demnach werden diese hier nicht näher erklärt. 
 
-\paragraph{Sneaking}
+\subsubsection{Sneaking}
 siehe Kapitel 2.4.3
 
-\subparagraph{Sneak into Basket}
+\paragraph{Sneak into Basket}
 siehe gleichnamigen Abschnitt unter Kapitel 2.4.3
 
-\subparagraph{Hidden Costs}
+\paragraph{Hidden Costs}
 siehe gleichnamigen Abschnitt unter Kapitel 2.4.3
 
-\subparagraph{Hidden Subscription (Mathur et al.)} fällt unter die Kategorie \textit{Sneaking} und taucht oft in Verbindung mit \textit{Hard to Cancel} auf. 
+\paragraph{Hidden Subscription (Mathur et al.)} fällt unter die Kategorie \textit{Sneaking} und taucht oft in Verbindung mit \textit{Hard to Cancel} auf. 
 
 Der Nutzer wird wiederholt zur Kasse gebeten unter dem Vorwand einer einmaligen Gebühr oder einer Probezeit. Dass das Abonnement laufend erneuert wird, fällt dem Nutzer erst nach Empfangen einer Rechnung auf.  
 
-\paragraph{Urgency}
+\subsubsection{Urgency}
 
-Beim Versuch einer Konversion\footnote{\label{foot:3} Konversion ist...} wird der Kunde dazu gedrängt, eine Kaufentscheidung zu treffen, indem eine Deadline auf Sales oder Schnäppchen gesetzt wird. 
+Beim Versuch einer Konversion\todo{Konversion definieren}\footnote{\label{foot:3} Konversion ist...} wird der Kunde dazu gedrängt, eine Kaufentscheidung zu treffen, indem eine Deadline auf Sales oder Schnäppchen gesetzt wird. 
 
 Kombiniert mit \textit{Social Proof} und \textit{Scarcity} kann dies potentiell einen FOMO-Effekt\footnote{\label{foot:4} Fear of Missing Out-Effekt} auslösen.
 
-\subparagraph{Countdown Timers} zeigt bei einem Angebot einen Timer an, der aussagt, wie viel Zeit noch verbleibt, bis eine Deadline verstrichen ist. \textit{Deceptive Countdown Timers} sollen den Nutzer eine Deadline vortäuschen und werden aktiviert, sobald die Seite besucht wird. Bei einem erneutem Besuch oder Aktualisieren der Seite wird der Timer erneut gestartet.
+\paragraph{Countdown Timer} zeigt bei einem Angebot einen Timer an, der aussagt, wie viel Zeit noch verbleibt, bis eine Deadline verstrichen ist. \textit{Deceptive Countdown Timer} sollen den Nutzer eine Deadline vortäuschen und werden aktiviert, sobald die Seite besucht wird. Bei einem erneutem Besuch oder Aktualisieren der Seite wird der Timer erneut gestartet.
 
-\subparagraph{Limited-time Messages} erzeugt durch die Angabe eines ablaufenden oder befristeten Angebots Zeitdruck beim Nutzer, ohne eine konkrete Deadline zu nennen.
+\paragraph{Limited-time Messages} erzeugt durch die Angabe eines ablaufenden oder befristeten Angebots Zeitdruck beim Nutzer, ohne eine konkrete Deadline zu nennen.
 
-\paragraph{Misdirection}
+\subsubsection{Misdirection}
 Definiert wurde dieses Dark Pattern von Brignull und hat Ähnlichkeit mit Gray's \textit{Interface Interference}.
 Hierbei werden visuelle, sprachliche und emotionale Signale versendet, um den Nutzer zu einer Entscheidung zu bewegen oder von einer Entscheidung abzuhalten. Bestimmte affektive oder kognitive Eigenschaften des Menschen sollen ausgenutzt werden, ohne tatsächlich die Auswahlmöglichkeiten des Nutzers einzuschränken.
 
-\subparagraph{Confirmshaming}
+\paragraph{Confirmshaming}
 Der Begriff wurde bereits von Brignull beschrieben und erinnert an Gray's \textit{Toying with Emotions}. 
 Mithilfe von Sprache sollen Emotionen im Nutzer geweckt werden, um den Nutzer von einer Entscheidung abzubringen. Meist geschieht das in Form von Pop-up Dialogen, die den Nutzer mit Rabatten anlocken und zur Eingabe der E-Mail Adresse auffordern. Lehnt der Nutzer das Angebot ab, werden absichtlich Scham-Gefühle oder der Framing-Effekt\footnote{\label{foot:5} Framing-Effekt} ausgelöst.
 
-\subparagraph{Visual Interference}
+\paragraph{Visual Interference}
 Dieses Dark Pattern ist wiederzuerkennen in Gray's \textit{False Hierarchy}. 
 Durch Stil und visuelle Darstellung wird eine Auswahl auffälliger gestaltet als andere Auswahlmöglichkeiten, sodass der Nutzer eher dazu tendiert, eine bestimmte Auswahl zu treffen.
 
-\subparagraph{Trick Question}
-Wie bereits in 2.4.4 im Abschnitt \textit{Interface Interference} erläutert, soll der Nutzer mithilfe von verwirrender Sprache dazu bewegt werden, eine bestimmte Entscheidung oder Auswahl zu treffen. Dies soll verhindern, dass er sich von einem Service (z.B. einem Newsletter) abmeldet. Der Nutzer geht davon aus, dass diese Auswahl seinen Präferenzen entspricht, was sowohl auf den Framing-Effekt, als auch auf den Default-Effekt abzielt.
+\paragraph{Trick Question}
+Wie bereits in 2.4.4 im Abschnitt \textit{Interface Interference} erläutert, soll der Nutzer mithilfe von verwirrender Sprache dazu bewegt werden, eine bestimmte Entscheidung oder Auswahl zu treffen. Dies soll verhindern, dass er sich von einem Service (z.B. einem Newsletter) abmeldet. Der Nutzer geht davon aus, dass diese Auswahl seinen Präferenzen entspricht, was sowohl auf den Framing-Effekt, als auch auf den Default-Effekt\footnote{\label{foot:6} Default-Effekt} abzielt.
 
-\subparagraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt\footnote{\label{foot:6} Default-Effekt}, den Anker-Effekt\footnote{\label{foot:7} Anker-Effekt} und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
+\paragraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt, den Anker-Effekt\footnote{\label{foot:7} Anker-Effekt} und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
 
 
-\paragraph{Social Proof}
+\subsubsection{Social Proof}
 Nutzer orientieren sich an dem Verhalten anderer Nutzer. Dies wird ausgenutzt, um die Entscheidungsfindung und Käufe der Nutzer zu beschleunigen (Bandwagon\footnote{\label{foot:5} Bandwagon}-Effekt).
 
-\subparagraph{Activity Notifications} zeigt die Aktivität anderer Nutzer bei einem Artikel an. Folgende Varianten treten dabei (oft in Kombination) auf: 
+\paragraph{Activity Notifications} zeigt die Aktivität anderer Nutzer bei einem Artikel an. Folgende Varianten treten dabei (oft in Kombination) auf: 
 \begin{enumerate}[label=\arabic*)]
 	\item{Namen von Nutzern, die dieses Produkt ebenfalls gekauft haben,}
 	\item{Wie viele Nutzer dieses Produkt im Einkaufswagen liegen haben,}
@@ -290,26 +286,26 @@ Nutzer orientieren sich an dem Verhalten anderer Nutzer. Dies wird ausgenutzt, u
 \end{enumerate}
 Dies soll Aufmerksamkeit erzeugen und taucht oft regelmäßig auf, ohne dass sich die numerischen Werte verändern. \textit{Deceptive Activity Notifications} generiert falsche, zufällige Nummern oder verwendet andere täuschende Aussagen durch die Erzeugung fester Werte.
 
-\subparagraph{Testimonials of Uncertain Origin} listet Nutzer-Empfehlungen und -Bewertungen von einem Produkt auf, bei denen nicht genau nachvollziehbar ist, woher sie stammen oder wie sie erstellt oder mitgeteilt wurden. 
+\paragraph{Testimonials of Uncertain Origin} listet Nutzer-Empfehlungen und -Bewertungen von einem Produkt auf, bei denen nicht genau nachvollziehbar ist, woher sie stammen oder wie sie erstellt oder mitgeteilt wurden. 
 
-\paragraph{Scarcity}
+\subsubsection{Scarcity}
 Zeigt für ein Produkt eine begrenzte Verfügbarkeit oder eine starke Nachfrage an. So kann der Wert des Produkts aus Sicht des Nutzers und der Wunsch nach ebendiesem Produkt erhöht werden.
 
-\subparagraph{Low-stock Messages} signalisiert dem Nutzer, dass nur noch eine begrenzte Anzahl eines Produkts verfügbar ist. Dies kann zu Unsicherheit, einem erhöhten Wunsch nach einem Produkt und zu Impulskäufen führen. \textit{Deceptive Low-stock Messages} gibt Auskunft über einen verringerten Vorrat eines Produkts, wobei der angegebene Wert immer wiederkehrt und fest geplant ist. Es kann auch eine zufällige Nummer generiert werden, sobald die Seite neu geladen wird. 
+\paragraph{Low-stock Messages} signalisiert dem Nutzer, dass nur noch eine begrenzte Anzahl eines Produkts verfügbar ist. Dies kann zu Unsicherheit, einem erhöhten Wunsch nach einem Produkt und zu Impulskäufen führen. \textit{Deceptive Low-stock Messages} gibt Auskunft über einen verringerten Vorrat eines Produkts, wobei der angegebene Wert immer wiederkehrt und fest geplant ist. Es kann auch eine zufällige Nummer generiert werden, sobald die Seite neu geladen wird. 
 
-\subparagraph{High-demand Messages} zeigt dem Nutzer die Begehrtheit eines Produkts an. So bekommt er den Eindruck vermittelt, dass das Produkt wahrscheinlich bald ausverkauft sein wird. Manchmal werden diese Werte jedoch willkürlich festgelegt und erscheinen beim Neuladen der Seite oder beim Betrachten eines anderen Produkts immer wieder.
+\paragraph{High-demand Messages} zeigt dem Nutzer die Begehrtheit eines Produkts an. So bekommt er den Eindruck vermittelt, dass das Produkt wahrscheinlich bald ausverkauft sein wird. Manchmal werden diese Werte jedoch willkürlich festgelegt und erscheinen beim Neuladen der Seite oder beim Betrachten eines anderen Produkts immer wieder.
 
-\subparagraph{Hard to Cancel (Mathur et al.)} zählt zu \textit{Obstruction} und ähnelt Brignull's Beschreibung von \textit{Roach Motel}. 
+\paragraph{Hard to Cancel (Mathur et al.)} zählt zu \textit{Obstruction} und ähnelt Brignull's Beschreibung von \textit{Roach Motel}. 
 
 Dem Nutzer ist nicht bewusst, dass er Mitglied oder Service-Abonnent geworden ist. Oft wird dem Nutzer das Gefühl vermittelt, jederzeit kündigen zu können, jedoch stellt sich dann beim Lesen der Geschäftsbedingungen heraus, dass man dies nur über einen umständlichen Weg, wie einem Anruf beim Kundenservice, bewerkstelligen kann. 
 
-\paragraph{Forced Action}
+\subsubsection{Forced Action}
 siehe 2.4.5 \textit{Forced Action} definiert von Gray et al.
 
-\subparagraph{Forced Enrollment}
+\paragraph{Forced Enrollment}
 Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. Newsletter) anzumelden oder ein Konto anzulegen, um ihn zur Preisgabe von Informationen zu verleiten. So muss er mit der Zustimmung der Geschäftsbedingungen auch dem Empfang von Marketing-E-Mails erlauben. Meistens werden dafür Checkboxen verwendet.
 
-\subsubsection{Soziale Netzwerke}
+\subsection{Soziale Netzwerke}
 \label{sub:soziale_netzwerke}
 
 \subsection{Desktop-Software}
@@ -348,7 +344,8 @@ Standard-Optionen werden so gesetzt, dass der Nutzer dazu angeregt werden soll, 
 siehe \textit{Forced Action} in Abschnitt 2.4.5
 
 \paragraph{Address Book Leeching}
-Der Nutzer wird nach Zugriffsrechten auf sein Adressbuch gefragt, damit er sich mit seinen Kontakten verbinden kann. Jedoch werden die Kontaktdaten intern gespeichert und für die Weiterverarbeitung genutzt, ohne dass der Nutzer darüber in Kenntnis gesetzt wird. Die Kontakte erhalten Einladungen oder Werbung, die oft im Namen des Nutzers versendet werden. Die Daten können auch genutzt werden, Profile zu erstellen und Individuen zu tracken.
+Der Nutzer wird nach Zugriffsrechten auf sein Adressbuch gefragt, damit er sich mit seinen Kontakten verbinden kann. Jedoch werden die Kontaktdaten intern gespeichert und für die Weiterverarbeitung genutzt, ohne dass der Nutzer darüber in Kenntnis gesetzt wird. Die Kontakte erhalten Einladungen oder Werbung, die oft im Namen des Nutzers versendet werden. Die Daten können auch genutzt werden, Profile zu erstellen und Individuen zu tracken.\newline
+Dieses Dark Pattern hängt mit Brignull's \textit{Friend Spam} zusammen. \todo{erläutern?}
 
 \paragraph{Shadow User Profiles}
 Daten über unregistrierte Personen können ohne ihre Zustimmung und ihr Wissen gesammelt und aufgezeichnet werden. Diese Informationen erhält der Dienstleister von importierten Adressbüchern registrierter Nutzer (z.B. via \textit{Address Book Leeching}), Metadaten oder Erwähnungen und können dazu genutzt werden, um Algorithmen zu verbessern, wie die Empfehlung von Kontakten oder Ad Targeting.
@@ -358,8 +355,9 @@ Daten über unregistrierte Personen können ohne ihre Zustimmung und ihr Wissen 
 \label{sub:games}
 
 \paragraph{Temporal Dark Patterns}
+Sorgen dafür, dass Spieler mehr oder weniger Zeit als erwartet mit einem Spiel verbringen. Oft kann dabei das Gefühl entstehen, dass Spieler ihre Zeit verschwenden.
 
-\subparagraph{Grinding}
+\subparagraph{Grinding} bedeutet laut Nakamura die Ausführung wiederholdender und langwieriger Aufgaben durch den Spieler \cite{nakamura}. Es ist ein wohlbekanntes Konzept für Gamer, welches jedoch umstritten ist.
 
 \subparagraph{Playing by Appointment}
 
@@ -377,29 +375,49 @@ Daten über unregistrierte Personen können ohne ihre Zustimmung und ihr Wissen 
 
 \subparagraph{Impersonation}
 
-\subsubsection{Proxemische Interaktions-Systeme}
+\subsection{Proxemische Interaktions-Systeme}
 \label{sub:proxemische_interaktions-systeme}{}
 Die Proxemik ist ein Forschungsgebiet, 
-Der Begriff der \textit{Proxemik} wurde vom Anthropologen Edward T. Hall im Jahr 1960 vorgestellt und umfasst die Theorie über non-verbale Kommunikationswege, die erklärt, wie Menschen ihre Umgebung wahrnehmen und nutzen, {}um Kommunikationsziele zu erreichen \cite{communicationstudies}. Der Theorie zufolge ist die physische Distanz zu anderen abhängig davon, in welcher Beziehung die Kommunikationspartner zueinander stehen. Laut S. Greenberg \glqq \textit{kann diese Erwartungshaltung des Menschen gegenüber der Proxemik für Interaktionsdesign genutzt werden, um die Interaktion zwischen Mensch und [digitalen] Geräten in einer Ubicomp-Umgebung \todo{Schönere Bezeichnung finden oder Definition formulieren} zu beeinflussen. So wie die Menschen zunehmendes Engagement und Intimität erwarten, wenn sie auf andere zugehen, so sollten sie es auch als natürlich empfinden, dass die Konnektivität und Interaktionsmöglichkeiten zunehmen, wenn sie selbst und ihre Geräte sich in unmittelbarer Nähe zueinander befinden. Dies wird als Proxemische Interaktion bezeichnet.}\grqq{} \cite{marquardt}\newline
+Der Begriff der \textit{Proxemik} wurde vom Anthropologen Edward T. Hall im Jahr 1960 vorgestellt und umfasst die Theorie über non-verbale Kommunikationswege, die erklärt, wie Menschen ihre Umgebung wahrnehmen und nutzen, um Kommunikationsziele zu erreichen \cite{communicationstudies}. Der Theorie zufolge ist die physische Distanz zu anderen abhängig davon, in welcher Beziehung die Kommunikationspartner zueinander stehen. S. Greenberg hat den Begriff der \textit{Proxemischen Interaktion} wie folgt definiert \cite{marquardt}:\newline 
+\begin{quote}
+\textit{[...] Diese Erwartungshaltung des Menschen kann gegenüber der Proxemik für Interaktionsdesign genutzt werden, um die Interaktion zwischen Mensch und [digitalen] Geräten in einer Ubicomp-Umgebung \todo{Schönere Bezeichnung finden oder Definition formulieren} zu beeinflussen. So wie die Menschen zunehmendes Engagement und Intimität erwarten, wenn sie auf andere zugehen, so sollten sie es auch als natürlich empfinden, dass die Konnektivität und Interaktionsmöglichkeiten zunehmen, wenn sie selbst und ihre Geräte sich in unmittelbarer Nähe zueinander befinden. Dies wird als Proxemische Interaktion bezeichnet.}
+\end{quote}
 Greenberg et al. erstellten eine Prognose, wie diese Technologie potentiell missbraucht werden könnte \cite{greenberg}. Nachfolgend wird diese zusammenfassend erläutert.
 
-\paragraph{The Captive Audience}
+\subsubsection{The Captive Audience}
 Eine Technologie wird im Raum strategisch platziert und nutzt die Gelegenheit der \glqq Gefangenschaft\grqq{} von Personen zu eigenen Zwecken aus, die an einem bestimmten Ort ein Ziel erreichen möchten, welches eine gewisse Zeit in Anspruch nimmt. So müssen Menschen beim Aufsuchen eines Ortes zur Durchführung einer Routine hinnehmen, dass das System eine unaufgeforderte und möglicherweise ungewollte Aktion ausführt.\newline
-Beispiele umfassen unter anderem Spiegelflächen-Werbung in öffentlichen Toiletten und öffentliche Werbeflächen. Ein weiteres Beispiel ist ein Projekt der Werbeagentur BBDO und dem Sender Sky Go, die einen Prototypen entwickelten, das über hochfrequentige Vibrationen Audio-Werbung für Pendler abspielt, sobald diese ihren Kopf an das Zugfenster lehnen\cite{zugfenster_ad}.  
+Beispiele umfassen unter anderem Spiegelflächen-Werbung in öffentlichen Toiletten \cite{youtube} und öffentliche Werbeflächen. Ein weiteres Beispiel ist ein Projekt der Werbeagentur BBDO und dem Sender Sky Go, die einen Prototypen entwickelten, das über hochfrequentige Vibrationen Audio-Werbung für Pendler abspielt, sobald diese ihren Kopf an das Zugfenster lehnen \cite{zugfenster_ad}.  
 
-\paragraph{The Attention Grabber}
+\subsubsection{The Attention Grabber}
+Ein strategisch in der Öffentlichkeit platziertes, proxemisch-sensibles System erzeugt Aufmerksamkeit, nachdem es ins Blickfeld einer vorbeilaufenden Person kommt. Es soll den Passanten in einen Kunden verwandeln.\newline
+Proximity Marketing, wie Apple's iBeacon oder Samsung Proximity, ist ein Beispiel dafür \cite{proximity_marketing} \cite{proximity_marketing2}. Hier werden Kunden in der Nähe via Smartphone-Benachrichtigung Informationen zugesendet, wie Produkt-Vorschläge oder Angebote.
 
-\paragraph{Bait and Switch}
+\subsubsection{Bait and Switch}
+Das System lockt einen Betrachter mit begehrenswerten Angeboten oder interessanten Informationen, sobald dieser allerdings darauf aufmerksam wird und sich der Anzeige nähert, verändert sich die Werbung. Daraufhin kann ihm ein Angebot angezeigt werden, das im Bezug auf Preis und Qualität nicht seinen Erwartungen entspricht, weil das zuvor angezeigte Produkt nicht mehr verfügbar ist. Es kann auch zur Darstellung von unerwarteter Werbung genutzt werden. Genauso ist es möglich, den Passanten nach einer Registrierung bei einem ungewollten Service zu fragen, damit er die Interaktion fortführen kann, was mit eventuellen Sicherheitsrisiken verbunden ist.\newline
+Amnesty International platzierte 2009 eine Werbung an einer Bushaltestelle, die mithilfe von Eye Tracking erkennen konnte, wann ein Wartender auf die Anzeige schaut und kurz darauf wurde das Bild verändert. Zunächst wurde ein Bild angezeigt, die Häusliche Gewalt darstellte, und sobald man hinsah, zeigte das Bild ein vermeintlich glückliches Pärchen. Dies sollte auf Häusliche Gewalt aufmerksam machen mit dem Slogan \glqq Es passiert, wenn niemand hinsieht.\grqq{} \cite{amnesty_international}
+Ein anderes, aktuelles Beispiel ist Öffentliches WLAN, wie am Bahnhof oder in Flughäfen. Personen werden mit angeblicher kostenloser WLAN-Verbindung angeworben, jedoch stellt sich erst später heraus, dass der Service erst nach einer Registrierung nutzbar ist. Nach erfolgreicher Verbindung ist die Surfgeschwindigkeit dann allerdings zu langsam und der Nutzer zieht möglicherweise ein Upgrade auf ein Premium-Angebot mit einer schnelleren Surfgeschwindigkeit in Erwägung.
 
-\paragraph{Making Personal Information Public}
+\subsubsection{Making Personal Information Public}
+Sobald eine Person einen bestimmten Bereich betritt, werden seine persönlichen Informationen öffentlich sichtbar gemacht. So können persönliche Informationen, wie Kalender-Einträge, Benachrichtigungen oder Direktnachrichten, auf Geräten in der Nähe angezeigt werden, z.B. auf öffentlichen \glqq Ambient Displays\grqq{}. Diese Systeme haben eigentlich die Absicht, hilfreich zu sein, jedoch können Außenstehende diese persönlichen Informationen einsehen.\newline
+In 2009 wagte eine niederländische Werbeagentur eine Guerilla-Marketing Aktion an einer Bushaltestelle von Fitness First in Rotterdam: Ein Gewichtssensor wurde in einer Sitzbank eingebaut und zeigte das Gewicht einer Person auf einem öffentlichen Display an, sobald diese Platz nahm \cite{fitness_first}.
 
-\paragraph{We Never Forget}
+\subsubsection{We Never Forget}
+Ein System identifiziert proxemische Interaktionen, weil eine permanente, fortbestehende (und ungewollte) Beziehung besteht. Der Verlauf von vergangenen proxemischen Interaktionen wird gespeichert, welcher dazu verwendet werden kann, Verbindungen wiederherzustellen, einen Informationsaustausch durchzuführen, und/oder um vorherige Kontexte wiederherzustellen (z.B. die Anzeige der letzten angezeigten Informationen).\newline
+Ein typisches Vorkommnis sind WiFi Hotspots, mit der sich mobile Geräte verbinden können. Möglicherweise möchten Nutzer es bei einer einmaligen Nutzung, und trotzdem kommt es zu einer erneuten, automatischen Verbindung mit dem Service. Dies kann auch die Sicherheit des Nutzers gefährden, wenn beispielsweise jemand ein gestohlenes Handy verwendet und die Anmeldedaten des (ehemaligen) Nutzers missbraucht.
 
-\paragraph{Disguised Data Collection}
+\subsubsection{Disguised Data Collection}
+Zur Verfügung gestellte Informationen eines bestimmten Services wird missbraucht, um Nutzerprofile mit Informationen anzureichern, ohne dass der Nutzer seine Zustimmung abgibt. Systeme, die proxemische Beziehungen nachverfolgen können, haben somit Zugang zu zahlreichen Daten über das Verhalten seiner Nutzer. Diese Infos können von Marketing-Abteilungen potentiell dazu genutzt werden, um Personen zu orten und zu verfolgen und dadurch herauszufinden, wie effektiv Marketing-Aktionen sind. Diese Technologie kann möglich gemacht werden mit bspw. RFID-Chips, Rundfunk-Mobiltelefone und Smart Cards. Viele öffentliche Displays arbeiten bereits mit Computervision, um proxemische Interaktionen nachzuverfolgen, demnach können Bildaufnahmen analysiert und Personen dadurch identifiziert werden. Zudem können kostenlose WiFi-Dienste aufspüren, an welchem Standort bzw. in welchem Geschäft sich eine Person befindet, indem die Signalstärke und die IP-Adresse des Geräts innerhalb eines Geschäfts gelesen wird.\newline
+Kombiniert mit anderen Daten-Ansammlungen, z.B. dem proxemischen Interaktionsverlauf (\textit{We Never Forget}), kann ein noch ausführlicheres Profil erstellt werden.
 
-\paragraph{The Social Network of Proxemic Contacts or Unintended Relationships}
+\subsubsection{The Social Network of Proxemic Contacts or Unintended Relationships}
+Das System verfolgt die proxemischen Beziehungen des Nutzers zu anderen und konstruiert auf dessen Basis ein soziales Netzwerk. Dabei geht es davon aus, dass der Nutzer in einer sozialen Beziehung zu diesen Personen steht, auch wenn dies nicht der Fall ist.\newline
+Mit den Daten könnten Marketer beispielsweise Zielgruppen durch demographische Merkmale erkennen. Die Techniken, die in \textit{Disguised Data Collection} beschrieben wurden, können auch dazu genutzt werden, soziale Beziehungen abzuschätzen, indem bspw. physische Distanz oder gemeinsame Interessen analysiert werden.
 
-\paragraph{The Milk Factor}
+\subsubsection{The Milk Factor}
+Ein proxemisches System zwingt eine Person, durch einen bestimmten Ort zu gehen oder diesen aufzusuchen, um einen Service zu erhalten.\newline
+Ähnlich wie in Supermärkten, wo Produkte strategisch platziert sind, um die Sichtbarkeit von bestimmten, promoteten Gegenständen und somit Impulskäufe zu erhöhen, können proxemische Interaktionen dafür sorgen, dass in Zonen bestimmte Funktionalitäten unzugänglich sind, damit Menschen sich zu bestimmten Orten begeben.\newline
+In Japan etwa gibt es Getränkeautomaten, die, wenn man weit weg steht, Werbebilder zeigen, angepasst an die aktuelle Jahreszeit, Temparatur und Tageszeit. Erst, wenn man sich dem Automaten nähert, kann man erkennen, welche Getränke angeboten werden. Demographische und Verkaufs-Daten werden ohne Einwilligung auf dem Firmenserver hochgeladen und für Analysen und zu Marketing-Zwecken verwendet.
+
 
 \subsection{Künstliche Intelligenz}
 \label{sub:kuenstliche_intelligenz}
