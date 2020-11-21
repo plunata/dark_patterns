@@ -2,9 +2,13 @@
 
 \usepackage[english, ngerman]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{epigrafica}
+\usepackage[LGR,OT1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{filecontents}
+\usepackage{multirow}
+\usepackage{booktabs}
 \usepackage[backend=biber,style=numeric, autocite=plain,sorting=none]{biblatex}
 \usepackage{hyperref}
 \usepackage[raggedright]{titlesec}
@@ -13,15 +17,33 @@
 \usepackage{url}
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \usepackage{color}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\usepackage{titlecaps}
+\usepackage{titlesec}
+\usepackage{accanthis}
+\usepackage{palatino}
+\usepackage[defaultsans]{droidsans}
 
 \definecolor{purple}{RGB}{148, 82, 165}
 \newcommand{\todo}[1]{{\color{purple}{#1}}}
 
 \hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\arabic{subsection}}
+
+
+\titleformat*{\section}{\normalfont\Large\bfseries\epigrafica}
+\titleformat*{\subsection}{\normalfont\large\bfseries\epigrafica}
+
+
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 %Formatierung des Paragraphen, sodass eine neue Zeile beginnt
+
+
+
 
 %\titleformat*{\subparagraph}{\bfseries\itshape}
 %\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
@@ -41,7 +63,7 @@
 
 \setcounter{secnumdepth}{4}
 %section depth (value steht fuer Stellen); bei 4 werden die Paragraphen durchnummeriert
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 %table of content depth
 
 
@@ -88,10 +110,11 @@
 \section{Einleitung} 
 \label{sec:einleitung}
 
+\subsectionfont{\MakeUppercase}
 \subsection{Problemfeld und Kontext}
 \label{sub:problemfeld_und_kontext}
 Bei der Gestaltung von digitalen Systemen spielt die User Experience (UX) eine wichtige Rolle für Online-Marketing und -Vertrieb, da sie maßgeblich zum Erfolg eines Unternehmens beiträgt. UX Design basiert unter anderem auf psychologischen und verhaltensökonomischen Erkenntnissen und hat langfristig zum Ziel, die Erfahrung des Nutzers während der Interaktion eines Produkts zu verbessern. Allerdings können diese Methoden auch dazu missbraucht werden, die menschliche Wahrnehmung und Verhaltensweisen zu beeinflussen, um wirtschaftlich davon zu profitieren. Nutzer können so zu nicht intendierten Taten verleitet und infolgedessen benachteiligen werden. Dies zu bemerken ist für viele schwierig, da der Zweck nicht transparent gemacht wird.
-Diese Taktiken werden als "Dark Patterns" bezeichnet und werden bereits ethisch erforscht. Heutzutage findet diese Art von manipulativem Design in vielen verschiedenen Bereichen Anwendung, wie in Desktop-, Web- oder Mobilen Applikationen, sowie in Games, Proxemischer Interaktion\footnote{\label{foot:1} Proxemische Interaktion bedeutet die Verbundenheit und Kommunikation zwischen Geräten und zwischen Mensch und Maschine, sobald diese sich in unmittelbarer Nähe zueinander befinden} und Künstlicher Intelligenz. 
+Diese Taktiken werden als \textit{Dark Patterns} bezeichnet und werden bereits ethisch erforscht. Heutzutage findet diese Art von manipulativem Design in vielen verschiedenen Bereichen Anwendung, wie in Desktop-, Web- oder Mobilen Applikationen, sowie in Videospielen, Proxemischer Interaktion\footnote{\label{foot:1} Proxemische Interaktion bedeutet die Verbundenheit und Kommunikation zwischen Geräten und zwischen Mensch und Maschine, sobald diese sich in unmittelbarer Nähe zueinander befinden} und Künstlicher Intelligenz. 
 
 
 \subsection{Ist-Zustand}
@@ -115,7 +138,12 @@ Aus den oben genannten Gründen weist das Thema auch eine hohe politische Releva
 
 \subsection{Über Dark Patterns} 
 \label{sub:die_hintergruende_der_dark_patterns}
+Der Ausdruck Dark Patterns stammt von Harry Brignull, welches er wie folgt definiert:
+\begin{quote}
+\textit{.}
+\end{quote}
 
+Noch heute setzt er sich aktiv gegen diese Methoden in digitalen Produkten ein und agiert als Sachverständiger in dem Bereich. Zudem führt er zusammen mit Alexander Darlington\footnote{\label{foot:2} Alexander Darlington ist im Bereich UX Research bei Aviva in Großbritannien tätig und betreibt Forschung in Ethischem Design.} die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}. 
 
 \subsection{Versteckte Geschäftsmodelle} 
 \label{sub:versteckte_geschaeftsmodelle}
@@ -125,13 +153,13 @@ Aus den oben genannten Gründen weist das Thema auch eine hohe politische Releva
 \label{sub:stakeholder}
 
 
-\subsection{Zielgruppen der Dark Patterns} 
+\subsection{Folgen von Dark Patterns} 
 \label{sub:zielgruppen_der_dark_patterns}
 
 
 \subsection{Allgemeine Dark Patterns Kategorien nach Gray}
 \label{sub:dark_patterns_kategorien}
-Der Ausdruck Dark Patterns stammt von Harry Brignull, der sich noch heute aktiv gegen diese Methoden in digitalen Produkten einsetzt und als Sachverständiger in dem Bereich agiert. Zudem führt er zusammen mit Alexander Darlington\footnote{\label{foot:2} Alexander Darlington ist im Bereich UX Research bei Aviva in Großbritannien tätig und betreibt Forschung in Ethischem Design.} die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}. Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien eingeteilt, die die Strategien und Motivation dahinter zusammenfasst \cite{gray}. 
+Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien eingeteilt, die die Strategien und Motivation dahinter zusammenfasst \cite{gray}. 
 Im Folgenden wird erläutert, was unter den einzelnen Kategorien zu verstehen ist und wie die Taxonomie von Brignull in diese einzuordnen ist. Diese Praktiken finden allgemein in der Gestaltung von digtalen Benutzeroberflächen Anwendung.
 
 \subsubsection{Nagging}
@@ -184,10 +212,8 @@ Eine Option in einem Dialog ist von Anfang an ausgewählt, noch bevor der Nutzer
  
 \paragraph{Aesthetic Manipulation (Gray et al.)}
 Die Form der Benutzeroberfläche wird so gestaltet, dass die Aufmerksamkeit des Nutzers auf etwas anderes gelenkt oder dass er von etwas anderem überzeugt wird. Brignull hat dieses Dark Pattern als \glqq Misdirection\grqq{} bezeichnet. 
-Darunter fallen die Dark Patterns \textit{Toying with Emotions}, \textit{False Hierarchy}, \textit{Disguised Ad} und \textit{Trick Question}.\newline
+Darunter fallen die Dark Patterns \textit{Toying with Emotions}, \textit{False Hierarchy}, \textit{Disguised Ad} und \textit{Trick Question}.
 
-%Stichpunkte stattdessen verwenden!
-%\hspace*{2em}\textbf{Toying with Emotions (Gray et al.)}\newline
 \subparagraph{Toying with Emotions (Gray et al.)} 
 setzt Elemente wie Farben, Sprache oder Schreibstil gezielt dafür ein, Emotionen hervorzurufen, um den Nutzer dazu zu bringen, eine bestimmte Aktion auszuführen. Hier kommen unter anderem niedliche \todo{zu viel oder XD} oder furchteinflößende Bilder, oder verlockende oder Angst machende Formulierungen zum Einsatz. Zum Beispiel kann es sich bei einem Angebot einer zeitnahen Lieferung nur um eine zeitlich begrenzte Garantie handeln, was den Nutzer unter Druck setzen kann, seinen Einkauf zügig abzuschließen. Nachforschungen von Gray zeigen allerdings, dass der Timer oft neugestartet wird, nachdem die Zeit um ist. 
 
@@ -249,9 +275,9 @@ Der Nutzer wird wiederholt zur Kasse gebeten unter dem Vorwand einer einmaligen 
 
 \subsubsection{Urgency}
 
-Beim Versuch einer Konversion\todo{Konversion definieren}\footnote{\label{foot:3} Konversion ist...} wird der Kunde dazu gedrängt, eine Kaufentscheidung zu treffen, indem eine Deadline auf Sales oder Schnäppchen gesetzt wird. 
+Der Kunde wird dazu gedrängt, eine Kaufentscheidung zu treffen, indem eine Deadline auf Sales oder Schnäppchen gesetzt wird. 
 
-Kombiniert mit \textit{Social Proof} und \textit{Scarcity} kann dies potentiell einen FOMO-Effekt\footnote{\label{foot:4} Fear of Missing Out-Effekt} auslösen.
+Kombiniert mit \textit{Social Proof} und \textit{Scarcity} kann dies potentiell einen FoMO-Effekt\footnote{\label{foot:4} FoMO steht für \textit{Fear of Missing Out} (dt. Angst, etwas zu verpassen) und beschreibt die Befürchtung davor, nicht auf dem aktuellsten Stand zu sein.} auslösen.
 
 \paragraph{Countdown Timer} zeigt bei einem Angebot einen Timer an, der aussagt, wie viel Zeit noch verbleibt, bis eine Deadline verstrichen ist. \textit{Deceptive Countdown Timer} sollen den Nutzer eine Deadline vortäuschen und werden aktiviert, sobald die Seite besucht wird. Bei einem erneutem Besuch oder Aktualisieren der Seite wird der Timer erneut gestartet.
 
@@ -270,13 +296,13 @@ Dieses Dark Pattern ist wiederzuerkennen in Gray's \textit{False Hierarchy}.
 Durch Stil und visuelle Darstellung wird eine Auswahl auffälliger gestaltet als andere Auswahlmöglichkeiten, sodass der Nutzer eher dazu tendiert, eine bestimmte Auswahl zu treffen.
 
 \paragraph{Trick Question}
-Wie bereits in 2.4.4 im Abschnitt \textit{Interface Interference} erläutert, soll der Nutzer mithilfe von verwirrender Sprache dazu bewegt werden, eine bestimmte Entscheidung oder Auswahl zu treffen. Dies soll verhindern, dass er sich von einem Service (z.B. einem Newsletter) abmeldet. Der Nutzer geht davon aus, dass diese Auswahl seinen Präferenzen entspricht, was sowohl auf den Framing-Effekt, als auch auf den Default-Effekt\footnote{\label{foot:6} Default-Effekt} abzielt.
+Wie bereits in 2.4.4 im Abschnitt \textit{Interface Interference} erläutert, soll der Nutzer mithilfe von verwirrender Sprache dazu bewegt werden, eine bestimmte Entscheidung oder Auswahl zu treffen. Dies soll verhindern, dass er sich von einem Service (z.B. einem Newsletter) abmeldet. Der Nutzer geht davon aus, dass diese Auswahl seinen Präferenzen entspricht, was sowohl auf den Framing-Effekt, als auch auf den Default-Effekt\footnote{\label{foot:6} Der Default-Effekt bezeichnet die Tendenz eines Menschen, eine vorausgewählte Entscheidung bzw. Option zu bevorzugen.} abzielt.
 
-\paragraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt, den Anker-Effekt\footnote{\label{foot:7} Anker-Effekt} und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
+\paragraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt, den Anker-Effekt\footnote{\label{foot:7} Beim Anker-Effekt basiert eine Entscheidung eines Menschen auf einer anfänglich angebotene Information, dem \glqq Anker\grqq{}. } und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
 
 
 \subsubsection{Social Proof}
-Nutzer orientieren sich an dem Verhalten anderer Nutzer. Dies wird ausgenutzt, um die Entscheidungsfindung und Käufe der Nutzer zu beschleunigen (Bandwagon\footnote{\label{foot:5} Bandwagon}-Effekt).
+Nutzer orientieren sich an dem Verhalten anderer Nutzer. Dies wird ausgenutzt, um die Entscheidungsfindung und Käufe der Nutzer zu beschleunigen (Mitläufereffekt\footnote{\label{foot:5} Der Mitläufereffekt sagt aus, dass Menschen dazu neigen, sich in ihrem Verhalten, ihrem Stil oder ihrer Einstellung nach anderen zu richten.}).
 
 \paragraph{Activity Notifications} zeigt die Aktivität anderer Nutzer bei einem Artikel an. Folgende Varianten treten dabei (oft in Kombination) auf: 
 \begin{enumerate}[label=\arabic*)]
@@ -316,13 +342,47 @@ Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. News
 Der Großteil der hier vorkommenden Dark Patterns stimmen mit Gray's Kategorien überein. Bei einigen Fällen mussten Geronimo et al. jedoch einschätzen, in welche Kategorie diese hineinpassen \cite{geronimo}.
 
 Für einzelne Kategorien werden Beispiele aufgezählt, die in Mobilen Apps Verwendung finden. Nicht berücksichtigt werden konnten allerdings Forced Continuity und Gamification, da Geronimo et al. dafür eine Langzeitstudie hätten durchführen müssen.\newline
-\begin{figure}[h]
- \includegraphics[width=15cm,height=13cm]{"dark_patterns_mobile_ui2"}
- \caption{Meine Grafik}
- \label{fig:meine-grafik}
-\end{figure}
 
 
+\begin{table}
+    \begin{tabular}{|l|l|l|}
+    \hline
+        Fall & Unterkategorie & Kategorie \\ \hline
+        - Ein Pop-up erscheint und unterbricht den Nutzer bei seiner Aufgabe &  &  \\ \hline
+        - Pop-up mit Aufforderung zur Bewertung der App &  & Nagging \\ \hline
+        - Konto-Löschung nicht möglich &  &  \\ \hline
+        - Logout nicht möglich & Roach Motel & Obstruction \\ \hline
+        - Herauskopieren des Produktnamen beim Shopping nicht möglich & Price Comparison Prevention &  \\ \hline
+        - Mehrere Währungen & Intermediate Currency &  \\ \hline
+        - Ungewollte Artikel werden dem Einkaufswagen hinzugefügt & Sneak into Basket & Sneaking \\ \hline
+        - Interaktion mit einem App-Feature leitet Nutzer auf Pop-Up mit Hinweis zum Upgrade auf Premium oder auf Android-/iOS-Store um (auch Disguised Ad) & Bait \& Switch &  \\ \hline
+        - Sich bewegende Buttons in der Werbung &  &  \\ \hline
+        - Kleines chließen-Button in der Werbung &  &  \\ \hline
+        - Anmeldung scheint erforderlich, obwohl die Features der App auch ohne Anmeldung nutzbar sind & Aesthetic Manipulation & Interface Interference \\ \hline
+        - Geschäftsbedingungen sind klein und/oder in Grau dargestellt & Hidden Information &  \\ \hline
+        - Benachrichtigung (und/oder E-Mails und SMS) ist vorausgewählt &  &  \\ \hline
+        - Eine Option ist vorausgewählt &  &  \\ \hline
+        - Senden von Nutzungsdaten vorausgewählt (auch Privacy Zuckering) & Preselection &  \\ \hline
+        - Countdown-Angebot &  &  \\ \hline
+        - Scham-Gefühle auslösen, wenn etwas nicht gemacht wurde & Toying with Emotions &  \\ \hline
+        - Eine von zwei oder mehreren Option sticht deutlicher hervor & False Hierarchy &  \\ \hline
+        - Verwendung doppelter Negation bei Auswahldialog & Trick Question &  \\ \hline
+        - Werbung in Form eines interaktiven Spiels &  &  \\ \hline
+        - Werbung oder gesponserter Inhalt, die zum Inhalt zu gehören scheinen &  &  \\ \hline
+        - Werbe-Icons/Buttons, die nicht als solche gekennzeichnet sind &  &  \\ \hline
+        - Interaktion mit einem App-Feature leitet Nutzer auf Pop-Up 
+        mit Hinweis zum Upgrade auf Premium oder auf 
+        Android-/iOS-Store um (auch Bait \& Switch) & Disguised Ad &  \\ \hline
+        - Countdown bei Werbeanzeigen &  &  \\ \hline
+        - Tägliche/wöchentliche Belohnungen oder Features &  &  \\ \hline
+        - Belohnung oder Bonus nach Anmeldung &  &  \\ \hline
+        - Countdown bei Belohnungen &  &  \\ \hline
+        - Freischalten von Features durch Anschauen von Werbung &  & Forced Action \\ \hline
+        - Einladen von Freunden und Belohnungen dafür erhalten & Social Pyramid &  \\ \hline
+        - Dark Patterns bei Privatsphäre-Einstellungen &  &  \\ \hline
+        - Senden von Nutzungsdaten vorausgewählt (auch Preselection) & Privacy Zuckering &  \\ \hline
+    \end{tabular}
+\end{table}
 
 \subsection{Privacy Dark Patterns}
 \label{sub:privacy_dark_patterns}
@@ -357,23 +417,33 @@ Daten über unregistrierte Personen können ohne ihre Zustimmung und ihr Wissen 
 \paragraph{Temporal Dark Patterns}
 Sorgen dafür, dass Spieler mehr oder weniger Zeit als erwartet mit einem Spiel verbringen. Oft kann dabei das Gefühl entstehen, dass Spieler ihre Zeit verschwenden.
 
-\subparagraph{Grinding} bedeutet laut Nakamura die Ausführung wiederholdender und langwieriger Aufgaben durch den Spieler \cite{nakamura}. Es ist ein wohlbekanntes Konzept für Gamer, welches jedoch umstritten ist.
+\subparagraph{Grinding} ist die Ausführung wiederholender, langwieriger Aufgaben durch den Spieler und kommt vor allem in MMORPGs\footnote{\label{foot:8} MMORPG steht für das Videospiel-Genre \textit{Massively Multiplayer Online Role-Playing Game}, bei dem mehrere Spieler online miteinander interagieren können.} und Social Media Games\footnote{\label{foot:9} Social Media Games ist ein Typ von Videospielen, das über ein Soziales Netzwerk gespielt werden kann.} vor \cite{nakamura}. Es ist ein wohlbekanntes, jedoch umstrittenes Konzept für Gamer, wodurch der Spieler Fortschritt machen und Belohnungen erhalten kann. Allerdings hat diese Aktivität ein hohes Suchtpotential \cite{king}.\newline 
+Vor allem Spieler, die sich mit anderen messen wollen, sind betroffen, da sie zur Erreichung ihrer Ziele anstreben müssen, besser zu werden. Für diejenigen, die sich dem Grinding verweigern, kann das Spielerlebnis eher beeinträchtigt werden. 
 
-\subparagraph{Playing by Appointment}
+\subparagraph{Playing by Appointment} verlangt vom Spieler, zu einem bestimmten, vom Spiel festgelegten Zeitpunkt das Spiel wieder aufzunehmen. In einigen Fällen droht dem Spieler ansonsten der Fortschritt, den er in einem Spiel gemacht hat.\newline
+In \textit{FarmVille} zum Beispiel, einem beliebten Social Network Game, werden Pflanzen gesät, um Punkte und Ressourcen zu erhalten, und diese müssen zu einem bestimmten Zeitpunkt (nach genau 24 Stunden) geerntet werden, bevor sie auf Anhieb verwelken. Der Spieler wird also dazu verpflichtet, seinen Tagesablauf dementsprechend anzupassen.
 
 \paragraph{Monetary Dark Patterns}
+Spieler sollen dazu gebracht werden, mehr Geld auszugeben als erwartet oder erhofft. Kann zu Reuegefühlen, Verlust von Zeitgefühl und zu Geldverlust führen.\newline
+Nicht zu verwechseln mit Glücks- oder Wettspielen.
 
-\subparagraph{Pay to Skip}
+\subparagraph{Pay to Skip} ist ein Konzept, das zu Arcade-Zeiten der 80er Jahre vertraut war, in dem man zum Fortfahren des Spiels eine Münze in den Automaten werfen musste. Heutzutage tritt dieses Dark Pattern oft in Free-to-play Games\footnote{\label{foot:10} Free-to-play Games sind grundsätzlich kostenlos spielbar und beinhalten oft kostenpflichtige Inhalte oder Werbung.} und Social Media Games auf. Es sieht vor, dass Spieler Geld ausgeben, um in einem Spiel voranzukommen.\newline
+Bei dem Augmented Reality Spiel \textit{Harry Potter: Wizards Unite} kann eine bestimmte Aktion nur mit einer Währung innerhalb des Spiels ausgeführt werden, und wenn diese aufgebraucht ist, muss man entweder ein sog. Gasthaus besuchen, oder (wenn kein Gasthaus in der Nähe ist) darauf warten, dass der Timer abgelaufen ist und der Spieler einen vom Spiel festgelegten Betrag der Währung erhält. Die Hauptfunktion des Spiels ist während dieser Wartezeit nicht verfügbar, somit ist das Weiterspielen unmöglich. Der Spieler kann diesen Timer mit Echtgeld überspringen.
 
-\subparagraph{Pre-Delivered Content}
+\subparagraph{Pre-Delivered Content} bedeutet, wenn trotz Erwerben eines Spiele-Exemplars bestimmte Inhalte oder Funktionen erst mit Zahlung einer Gebühr freigeschaltet werden müssen. Der Spieler bekommt dadurch das Gefühl, ein unvollständiges Spiel erworben zu haben.\newline
+Die aktuellen Spiele der \textit{Tekken}-Serie bietet mehrere spielbare Charaktere an, von denen viele erst gegen eine Gebühr ausgewählt werden können. 
 
-\subparagraph{Monetized Rivalries}
+
+\subparagraph{Monetized Rivalries} wird auch als \textit{Pay to Win} bezeichnet und steht im Zusammenhang mit \textit{Grinding}. In manchen Spielen kommt es vor, dass das Ansammeln von In-Game Währungen so langsam voran geht, dass sich ein Spieler sehr lange mit Grinding beschäftigen muss, um die für das Weiterkommen notwendigen Gegenstände freischalten zu können.\newline
+Ein Spieler kann sich, vor allem bei Wettkämpfen, durch Cheat Codes\footnote{\label{foot:11} Cheat Codes oder Cheats sind Einflussmöglichkeiten auf den Spielverlauf, die ursprünglich nicht vorgesehen sind und werden von Spielern verwendet, die ein Spiel zu ihren Gunsten manipulieren wollen.} oder schwer zu bekommende Gegenstände Vorteile gegenüber anderen Spielern verschaffen, indem er Echtgeld in eine In-Game Währung investiert. Somit können Top-Ränge und die damit verbundenen Bonusinhalte erreicht werden, wenn mit Echtgeld immer wieder Upgrades oder neueste Gegenstände erworben werden, während es weniger zahlungsfähigen Spielern unmöglich gemacht wird, eine Position in der Bestenliste zu erreichen.\newline
+In dem Social Media Game \textit{Candy Crush Saga} ist es für den Spieler erforderlich, Geld im Spiel zu kaufen, um gegenüber seinen Facebook-Freunden konkurrenzfähig zu bleiben.  
 
 \paragraph{Social Capital-Based Dark Patterns}
+Spieler erhalten starke Anreize, wie Boni und Vorteile im Spiel, wenn sie ihre Freunde und Familienmitglieder zum Spielen einladen.
 
-\subparagraph{Social Pyramid Schemes}
+\subparagraph{Social Pyramid Schemes} macht Gebrauch von den Beziehungen des Spielers, bei dem dieser pro eingeladenem Freund Spiele-Vorteile bekommt. Oft werden bestimmte Funktionen erst freigeschaltet, wenn man eine bestimmte Anzahl an Freunden hinzugefügt hat.
 
-\subparagraph{Impersonation}
+\subparagraph{Impersonation} wird vor allem in Social Network Games genutzt und ist vergleichbar mit Brignull's \textit{Friend Spam}. Hier werden die Namen aus der Kontaktliste des Spielers für Benachrichtigungen an ihn selbst verwendet. So erhält ein Spieler zum Beispiel eine Nachricht über ein Geschenk eines Freundes, obwohl dieser Freund eine solche Aktion gar nicht ausgeführt hat. Somit wird der Spieler dazu motiviert, das Spiel (weiter) zu spielen. Der Spieler kann sich dadurch auch verpflichtet fühlen, ein Geschenk zurück zu senden.
 
 \subsection{Proxemische Interaktions-Systeme}
 \label{sub:proxemische_interaktions-systeme}{}
