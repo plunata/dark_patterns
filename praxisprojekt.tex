@@ -36,6 +36,7 @@
 
 \titleformat*{\section}{\normalfont\Large\bfseries\epigrafica}
 \titleformat*{\subsection}{\normalfont\large\bfseries\epigrafica}
+\titleformat{\subsubsection}[hang]{\normalfont\Large\bfseries\epigrafica}{\thesubsubsection}{1em}{}%TODO
 
 
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -99,10 +100,6 @@
 	\setlength{\parindent}{0pt}
 
 \vspace{2cm}
-\begin{abstract}
-
-
-\end{abstract}
 	\newpage
 	\tableofcontents
 	\newpage
@@ -119,11 +116,11 @@ Diese Taktiken werden als \textit{Dark Patterns} bezeichnet und werden bereits e
 
 \subsection{Ist-Zustand}
 \label{sub:ist-zustand}
-Der Begriff \textit{Dark Patterns} wurde von dem UX-Experten Harry Brignull geprägt, als er im Jahr 2010 einen Blog-Beitrag veröffentlichte \cite{brignull1} und kurze Zeit später einen Vortrag auf der UX Brighton Conference hielt. Inzwischen wurden bereits einige Paper über das Thema verfasst, die verschiedene Nutzungskontexte beschreiben. Da demnach viele unterschiedliche Technologien Dark Patterns enthalten, ist der Themenbereich recht unübersichtlich und komplex, wodurch eine ausführliche Recherche notwendig ist.
+Der Begriff \textit{Dark Patterns} wurde Harry Brignull\footnote{\label{foot:2} Als UX-Experte und Doktor der Kognitionswissenschaften setzt er sich noch heute aktiv gegen diese Methoden in digitalen Produkten ein und agiert als Sachverständiger in dem Bereich. Zudem führt er zusammen mit Alexander Darlington (UX Researcher und Forscher im Ethischen Design die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}.} geprägt, als er im Jahr 2010 einen Blog-Beitrag veröffentlichte \cite{brignull1} und kurze Zeit später einen Vortrag auf der UX Brighton Conference hielt. Inzwischen wurden bereits einige Paper über das Thema verfasst, die verschiedene Nutzungskontexte beschreiben. Da demnach viele unterschiedliche Technologien Dark Patterns enthalten, ist der Themenbereich recht unübersichtlich und komplex, wodurch eine ausführliche Recherche notwendig ist.
 
 \subsection{Ziel und Lösungsansatz}
 \label{sub:ziel_und_loesungsansatz}
-Das Ziel soll es sein, eine Übersicht in das Themenkomplex Dark Patterns zu bringen, indem diese nach Systemen strukturiert werden. Es soll analysiert werden, welche Dark Patterns zu den jeweiligen Nutzungskontexten existieren und welche versteckten Geschäftsmodelle dahinterstecken. Ebenso gilt es herauszufinden, welche Zielgruppe von diesen Methoden betroffen sind und wer die Stakeholder sind. 
+Das Ziel soll es sein, eine Übersicht in das Themenkomplex Dark Patterns zu bringen, indem diese nach Systemen strukturiert werden. Es soll analysiert werden, welche Dark Patterns zu den jeweiligen Nutzungskontexten existieren. Ebenso gilt es herauszufinden, welche Zielgruppe von diesen Methoden betroffen sind und wer die Stakeholder sind. 
 
 \subsection{Motivation}
 \label{motivation}
@@ -138,26 +135,15 @@ Aus den oben genannten Gründen weist das Thema auch eine hohe politische Releva
 
 \subsection{Über Dark Patterns} 
 \label{sub:die_hintergruende_der_dark_patterns}
-Der Ausdruck Dark Patterns stammt von Harry Brignull, welches er wie folgt definiert:
+Der Ausdruck Dark Patterns, auch als  \glqq Deceptive Design\grqq{} oder \glqq Unethical Design\grqq{} bezeichnet, stammt von Harry Brignull, welches er wie folgt definiert:
 \begin{quote}
-\textit{.}
+\glqq \textit{A user interface that has been carefully crafted to trick users into doing things… they are not mistakes, they are carefully crafted with a solid understanding of human psychology, and they do not have the user's interest in mind.}\grqq{}
 \end{quote}
+Demnach werden solche Benutzeroberflächen strategisch mit manipulativen Methoden gestaltet auf Basis von menschlichen Denk-, Wahrnehmungs- und Verhaltensmustern, sodass Einflussnahme auf diese genommen werden kann. Dies kann negative Konsequenzen für den Nutzer nach sich ziehen, wenn sie zur Ausführung von unbeabsichtigten Aktionen verleitet werden.\newline
+Heutzutage sind Apps und Online-Dienste fester Bestandteil des alltäglichen Lebens. Dabei ist die Informationsflut unvermeidbar, in der Nutzer ständig vor Entscheidungen gestellt werden im Bezug auf Vertragsbedingungen und Einwilligung der Verarbeitung persönlicher Daten. Es fehlt die Zeit, sich zu informieren und gründlich über Entscheidungen nachzudenken, und dabei nehmen Nutzer eine Begegnung mit Dark Patterns oftmals nicht wahr, da sie gut versteckt sind. Manche sorgen lediglich für Frust und Ärger, hinter anderen steckt allerdings eine gezielte Täuschungsabsicht, die beispielsweise zu finanziellem Verlust, zu zwanghaftem oder Suchtverhalten führt, sowie die Nutzer dazu bringt, persönliche Informationen preiszugeben \cite{mathur}. Besonders bei unerfahrenen Nutzer, wie Kindern, Jugendlichen, Senioren und bildungsfernen Gruppen, kann dies Schaden anrichten \cite{tab}. \newline\newline
+Bei der Anwendung von Dark Patterns auf digitale Produkte hat sich vor allem A/B-Testing\footnote{\label{foot:1}A/B-Testing ist eine UX Research Methode, bei der Testpersonen zwei Varianten eines Prototypen gezeigt werden und daraufhin untersucht wird, welche Variante effektiver ist.} als ein hilfreiches Werkzeug für die Kundengewinnung, Umsatzsteigerung und Maximierung der Nutzungsdauer erwiesen, unter anderem im Rahmen von Neuromarketing \cite{snv}\cite{narayanan}\cite{tab}. Doch nicht nur im Onlinehandel mit Waren oder Dienstleistungen sind Dark Patterns zu finden. Darüber hinaus werden sie auch eingesetzt unter anderem in Online-Diensten, wie E-Mail-Dienste, Suchmaschinen, Download- und Streaming-Anbietern, sowie in Social Media Plattformen \cite{fastcompany}, Betriebssystemen von Computern und Smartphones, in Buchungsportalen \cite{swr}, Smart-TVs \cite{bundeskartellamt} und Games. Ebenso werden unethische Design-Methoden bereits in neuartigen Technologien erforscht, etwa in der Robotik oder in proxemischen Interaktions-Systemen.  
 
-Noch heute setzt er sich aktiv gegen diese Methoden in digitalen Produkten ein und agiert als Sachverständiger in dem Bereich. Zudem führt er zusammen mit Alexander Darlington\footnote{\label{foot:2} Alexander Darlington ist im Bereich UX Research bei Aviva in Großbritannien tätig und betreibt Forschung in Ethischem Design.} die Webseite darkpatterns.org, auf der Brignull die von ihm definierte Taxonomie von Dark Patterns beschreibt, und macht auf dem dazugehörigen Twitter-Account öffentlich auf das Thema aufmerksam \cite{brignull3}\cite{brignull4}. 
-
-\subsection{Versteckte Geschäftsmodelle} 
-\label{sub:versteckte_geschaeftsmodelle}
-
-
-\subsubsection{Stakeholder}
-\label{sub:stakeholder}
-
-
-\subsection{Folgen von Dark Patterns} 
-\label{sub:zielgruppen_der_dark_patterns}
-
-
-\subsection{Allgemeine Dark Patterns Kategorien nach Gray}
+\subsection{Allgemeine Dark Patterns Kategorien}
 \label{sub:dark_patterns_kategorien}
 Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien eingeteilt, die die Strategien und Motivation dahinter zusammenfasst \cite{gray}. 
 Im Folgenden wird erläutert, was unter den einzelnen Kategorien zu verstehen ist und wie die Taxonomie von Brignull in diese einzuordnen ist. Diese Praktiken finden allgemein in der Gestaltung von digtalen Benutzeroberflächen Anwendung.
@@ -257,17 +243,20 @@ Im Folgenden werden verschiedene Nutzungskontexte aufgeführt, in denen Dark Pat
 \subsection{Shopping Websites}
 \label{sub:shopping}
 Viele wissenschaftliche Arbeiten haben sich mit der Untersuchung von Marktmanipulation beschäftigt und beschreiben, wie Unternehmen die Beschränkungen der menschlichen Wahrnehmung und die kognitive Verzerrung zu deren Vorteil nutzen können \cite{mathur}\cite{narayanan}. Vor allem im digitalen Bereich sind solche Methoden gut anzuwenden, da es heutzutage möglich ist, Daten über Nutzerverhalten zu erfassen und zu analysieren und somit die Methoden auf Effektivität zu prüfen.\newline\newline
-Mathur et al. erläutert, wie verbreitet Dark Patterns in Online-Shops sind und inwiefern diese Methoden Nutzer beeinflussen und ihnen schaden können. Das Team entwickelte ein Tool, das automatisch Dark Patterns in Online-Shops entdeckt und mithilfe dessen konkrete Ergebnisse und Erkenntnisse ermittelt wurden. Bei der Untersuchung von ungefähr 11.000 beliebten Shopping-Webseiten auf Dark Patterns konnte festgestellt werden, dass 1.254 Webseiten (ca. 11,1\%) über 1.800 Dark Patterns enthalten, von denen 183 Webseiten betrügerische Nachrichten verwenden.\newline\newline     
+Mathur et al. erläutert, wie verbreitet Dark Patterns in Online-Shops sind und inwiefern diese Methoden Nutzer beeinflussen und ihnen potentiell schaden können. Das Team entwickelte ein Tool, das automatisch Dark Patterns in Online-Shops entdeckt und mithilfe dessen konkrete Ergebnisse und Erkenntnisse ermittelt wurden. Bei der Untersuchung von ungefähr 11.000 beliebten Shopping-Webseiten auf Dark Patterns konnte festgestellt werden, dass 1.254 Webseiten (ca. 11,1\%) über 1.800 Dark Patterns enthalten, von denen 183 Webseiten betrügerische Nachrichten verwenden.\newline\newline     
 Nachfolgend werden die von Mathur et al. festgelegten Kategorien kurz erläutert. Einige Typen von Dark Patterns, die in Online-Shops vorkommen, wurden bereits von Gray et al. beschrieben, demnach werden diese hier nicht näher erklärt. 
 
 \subsubsection{Sneaking}
-siehe Kapitel 2.4.3
+siehe Kapitel I.2.4.3 
+\todo{Verlinkung hinzufügen}
 
 \paragraph{Sneak into Basket}
-siehe gleichnamigen Abschnitt unter Kapitel 2.4.3
+siehe gleichnamigen Abschnitt unter Kapitel I.2.4.3 
+\todo{Verlinkung hinzufügen}
 
 \paragraph{Hidden Costs}
-siehe gleichnamigen Abschnitt unter Kapitel 2.4.3
+siehe gleichnamigen Abschnitt unter Kapitel I.2.4.3 
+\todo{Verlinkung hinzufügen}
 
 \paragraph{Hidden Subscription (Mathur et al.)} fällt unter die Kategorie \textit{Sneaking} und taucht oft in Verbindung mit \textit{Hard to Cancel} auf. 
 
@@ -289,7 +278,7 @@ Hierbei werden visuelle, sprachliche und emotionale Signale versendet, um den Nu
 
 \paragraph{Confirmshaming}
 Der Begriff wurde bereits von Brignull beschrieben und erinnert an Gray's \textit{Toying with Emotions}. 
-Mithilfe von Sprache sollen Emotionen im Nutzer geweckt werden, um den Nutzer von einer Entscheidung abzubringen. Meist geschieht das in Form von Pop-up Dialogen, die den Nutzer mit Rabatten anlocken und zur Eingabe der E-Mail Adresse auffordern. Lehnt der Nutzer das Angebot ab, werden absichtlich Scham-Gefühle oder der Framing-Effekt\footnote{\label{foot:5} Framing-Effekt} ausgelöst.
+Mithilfe von Sprache sollen Emotionen im Nutzer geweckt werden, um den Nutzer von einer Entscheidung abzubringen. Meist geschieht das in Form von Pop-up Dialogen, die den Nutzer mit Rabatten anlocken und zur Eingabe der E-Mail Adresse auffordern. Lehnt der Nutzer das Angebot ab, werden absichtlich Scham-Gefühle oder der Framing-Effekt\footnote{\label{foot:5} Die Entscheidung einer Person ist abhängig von der Formulierung einer Aussage, auch wenn es sich hierbei um dieselbe Information handelt. Dies wird Framing-Effekt genannt.}  ausgelöst.
 
 \paragraph{Visual Interference}
 Dieses Dark Pattern ist wiederzuerkennen in Gray's \textit{False Hierarchy}. 
@@ -298,7 +287,7 @@ Durch Stil und visuelle Darstellung wird eine Auswahl auffälliger gestaltet als
 \paragraph{Trick Question}
 Wie bereits in 2.4.4 im Abschnitt \textit{Interface Interference} erläutert, soll der Nutzer mithilfe von verwirrender Sprache dazu bewegt werden, eine bestimmte Entscheidung oder Auswahl zu treffen. Dies soll verhindern, dass er sich von einem Service (z.B. einem Newsletter) abmeldet. Der Nutzer geht davon aus, dass diese Auswahl seinen Präferenzen entspricht, was sowohl auf den Framing-Effekt, als auch auf den Default-Effekt\footnote{\label{foot:6} Der Default-Effekt bezeichnet die Tendenz eines Menschen, eine vorausgewählte Entscheidung bzw. Option zu bevorzugen.} abzielt.
 
-\paragraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt, den Anker-Effekt\footnote{\label{foot:7} Beim Anker-Effekt basiert eine Entscheidung eines Menschen auf einer anfänglich angebotene Information, dem \glqq Anker\grqq{}. } und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
+\paragraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt, den Anker-Effekt\footnote{\label{foot:7} Beim Anker-Effekt basiert eine Entscheidung eines Menschen auf einer anfänglich angebotene Information, dem \glqq Anker\grqq{}.} und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
 
 
 \subsubsection{Social Proof}
@@ -331,11 +320,9 @@ siehe 2.4.5 \textit{Forced Action} definiert von Gray et al.
 \paragraph{Forced Enrollment}
 Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. Newsletter) anzumelden oder ein Konto anzulegen, um ihn zur Preisgabe von Informationen zu verleiten. So muss er mit der Zustimmung der Geschäftsbedingungen auch dem Empfang von Marketing-E-Mails erlauben. Meistens werden dafür Checkboxen verwendet.
 
-\subsection{Soziale Netzwerke}
+\subsection{Social Media Plattformen}
 \label{sub:soziale_netzwerke}
-
-\subsection{Desktop-Software}
-\label{sub:desktop-software}
+\todo{Text hinzufügen}
 
 \subsection{Mobile Anwendungen}
 \label{sub:mobile_anwendungen}
@@ -343,107 +330,72 @@ Der Großteil der hier vorkommenden Dark Patterns stimmen mit Gray's Kategorien 
 
 Für einzelne Kategorien werden Beispiele aufgezählt, die in Mobilen Apps Verwendung finden. Nicht berücksichtigt werden konnten allerdings Forced Continuity und Gamification, da Geronimo et al. dafür eine Langzeitstudie hätten durchführen müssen.\newline
 
-
-\begin{table}
-    \begin{tabular}{|l|l|l|}
-    \hline
-        Fall & Unterkategorie & Kategorie \\ \hline
-        - Ein Pop-up erscheint und unterbricht den Nutzer bei seiner Aufgabe &  &  \\ \hline
-        - Pop-up mit Aufforderung zur Bewertung der App &  & Nagging \\ \hline
-        - Konto-Löschung nicht möglich &  &  \\ \hline
-        - Logout nicht möglich & Roach Motel & Obstruction \\ \hline
-        - Herauskopieren des Produktnamen beim Shopping nicht möglich & Price Comparison Prevention &  \\ \hline
-        - Mehrere Währungen & Intermediate Currency &  \\ \hline
-        - Ungewollte Artikel werden dem Einkaufswagen hinzugefügt & Sneak into Basket & Sneaking \\ \hline
-        - Interaktion mit einem App-Feature leitet Nutzer auf Pop-Up mit Hinweis zum Upgrade auf Premium oder auf Android-/iOS-Store um (auch Disguised Ad) & Bait \& Switch &  \\ \hline
-        - Sich bewegende Buttons in der Werbung &  &  \\ \hline
-        - Kleines chließen-Button in der Werbung &  &  \\ \hline
-        - Anmeldung scheint erforderlich, obwohl die Features der App auch ohne Anmeldung nutzbar sind & Aesthetic Manipulation & Interface Interference \\ \hline
-        - Geschäftsbedingungen sind klein und/oder in Grau dargestellt & Hidden Information &  \\ \hline
-        - Benachrichtigung (und/oder E-Mails und SMS) ist vorausgewählt &  &  \\ \hline
-        - Eine Option ist vorausgewählt &  &  \\ \hline
-        - Senden von Nutzungsdaten vorausgewählt (auch Privacy Zuckering) & Preselection &  \\ \hline
-        - Countdown-Angebot &  &  \\ \hline
-        - Scham-Gefühle auslösen, wenn etwas nicht gemacht wurde & Toying with Emotions &  \\ \hline
-        - Eine von zwei oder mehreren Option sticht deutlicher hervor & False Hierarchy &  \\ \hline
-        - Verwendung doppelter Negation bei Auswahldialog & Trick Question &  \\ \hline
-        - Werbung in Form eines interaktiven Spiels &  &  \\ \hline
-        - Werbung oder gesponserter Inhalt, die zum Inhalt zu gehören scheinen &  &  \\ \hline
-        - Werbe-Icons/Buttons, die nicht als solche gekennzeichnet sind &  &  \\ \hline
-        - Interaktion mit einem App-Feature leitet Nutzer auf Pop-Up 
-        mit Hinweis zum Upgrade auf Premium oder auf 
-        Android-/iOS-Store um (auch Bait \& Switch) & Disguised Ad &  \\ \hline
-        - Countdown bei Werbeanzeigen &  &  \\ \hline
-        - Tägliche/wöchentliche Belohnungen oder Features &  &  \\ \hline
-        - Belohnung oder Bonus nach Anmeldung &  &  \\ \hline
-        - Countdown bei Belohnungen &  &  \\ \hline
-        - Freischalten von Features durch Anschauen von Werbung &  & Forced Action \\ \hline
-        - Einladen von Freunden und Belohnungen dafür erhalten & Social Pyramid &  \\ \hline
-        - Dark Patterns bei Privatsphäre-Einstellungen &  &  \\ \hline
-        - Senden von Nutzungsdaten vorausgewählt (auch Preselection) & Privacy Zuckering &  \\ \hline
-    \end{tabular}
-\end{table}
+\todo{Tabelle mit UI-Beispielen hinzufügen}
 
 \subsection{Privacy Dark Patterns}
 \label{sub:privacy_dark_patterns}
+\todo{Privacy Dark Patterns beschreiben}
 
-\paragraph{Immortal Accounts (Bösch et al.)}
+
+\subsubsection{Immortal Accounts (Bösch et al.)}
 % Obstruction
 Dem Nutzer wird es erschwert oder sogar unmöglich gemacht, sein Konto zu löschen. Zudem kann die Löschung vorgetäuscht werden, während in Wirklichkeit (einige) persönliche Daten behalten werden. Letztendlich können die Barrieren dazu führen, dass der Nutzer sich dagegen entscheidet, sein Konto zu löschen, um sich unnötige Mühen zu ersparen. 
 
-\paragraph{Hidden Legalese Stipulations}
+\subsubsection{Hidden Legalese Stipulations}
 % Interface Interference
 Geschäftsbedingungen sind oft zu lang gestaltet und schwer verständlich formuliert. Aufgrund dessen lesen viele Nutzer diese nicht, wodurch er angreifbar wird, wenn er den Bedingungen dennoch zustimmt. Denn es können Klauseln in den Geschäftsbedingungen versteckt sein und oftmals ohne Vorankündigung verändert werden.  
 
-\paragraph{Bad Defaults}
+\subsubsection{Bad Defaults}
 % Interface Interference
 Standard-Optionen werden so gesetzt, dass der Nutzer dazu angeregt werden soll, seine persönlichen Informationen mit dem Service zu teilen. Die meisten Menschen haben keine Zeit, um alle Konfigurationen zur Privatsphäre durchzugehen und an seine Bedürfnisse anzupassen. Infolgedessen geben Nutzer oft mehr über sich preis, als sie beabsichtigen, wie Informationen über den Online-Status, Teile des Nutzerprofils oder Seitenbesuche. Dieses Dark Pattern wird meistens verwendet auf Web- und mobilen Applikationen, vor allem in Sozialen Netzwerken.  
 
 % Forced Action
-\paragraph{Privacy Zuckering}
-siehe \textit{Forced Action} in Abschnitt 2.4.5
+\subsubsection{Privacy Zuckering}
+siehe \textit{Forced Action} in Abschnitt I.2.4.5
 
-\paragraph{Address Book Leeching}
+\subsubsection{Address Book Leeching}
 Der Nutzer wird nach Zugriffsrechten auf sein Adressbuch gefragt, damit er sich mit seinen Kontakten verbinden kann. Jedoch werden die Kontaktdaten intern gespeichert und für die Weiterverarbeitung genutzt, ohne dass der Nutzer darüber in Kenntnis gesetzt wird. Die Kontakte erhalten Einladungen oder Werbung, die oft im Namen des Nutzers versendet werden. Die Daten können auch genutzt werden, Profile zu erstellen und Individuen zu tracken.\newline
 Dieses Dark Pattern hängt mit Brignull's \textit{Friend Spam} zusammen. \todo{erläutern?}
 
-\paragraph{Shadow User Profiles}
+\subsubsection{Shadow User Profiles}
 Daten über unregistrierte Personen können ohne ihre Zustimmung und ihr Wissen gesammelt und aufgezeichnet werden. Diese Informationen erhält der Dienstleister von importierten Adressbüchern registrierter Nutzer (z.B. via \textit{Address Book Leeching}), Metadaten oder Erwähnungen und können dazu genutzt werden, um Algorithmen zu verbessern, wie die Empfehlung von Kontakten oder Ad Targeting.
 
 
 \subsection{Games}
 \label{sub:games}
+\todo{DPs in Games beschreiben}
 
-\paragraph{Temporal Dark Patterns}
+
+\subsubsection{Temporal Dark Patterns}
 Sorgen dafür, dass Spieler mehr oder weniger Zeit als erwartet mit einem Spiel verbringen. Oft kann dabei das Gefühl entstehen, dass Spieler ihre Zeit verschwenden.
 
-\subparagraph{Grinding} ist die Ausführung wiederholender, langwieriger Aufgaben durch den Spieler und kommt vor allem in MMORPGs\footnote{\label{foot:8} MMORPG steht für das Videospiel-Genre \textit{Massively Multiplayer Online Role-Playing Game}, bei dem mehrere Spieler online miteinander interagieren können.} und Social Media Games\footnote{\label{foot:9} Social Media Games ist ein Typ von Videospielen, das über ein Soziales Netzwerk gespielt werden kann.} vor \cite{nakamura}. Es ist ein wohlbekanntes, jedoch umstrittenes Konzept für Gamer, wodurch der Spieler Fortschritt machen und Belohnungen erhalten kann. Allerdings hat diese Aktivität ein hohes Suchtpotential \cite{king}.\newline 
+\paragraph{Grinding} ist die Ausführung wiederholender, langwieriger Aufgaben durch den Spieler und kommt vor allem in MMORPGs\footnote{\label{foot:8} MMORPG steht für das Videospiel-Genre \textit{Massively Multiplayer Online Role-Playing Game}, bei dem mehrere Spieler online miteinander interagieren können.} und Social Media Games\footnote{\label{foot:9} Social Media Games ist ein Typ von Videospielen, das über ein Soziales Netzwerk gespielt werden kann.} vor \cite{nakamura}. Es ist ein wohlbekanntes, jedoch umstrittenes Konzept für Gamer, wodurch der Spieler Fortschritt machen und Belohnungen erhalten kann. Allerdings hat diese Aktivität ein hohes Suchtpotential \cite{king}.\newline 
 Vor allem Spieler, die sich mit anderen messen wollen, sind betroffen, da sie zur Erreichung ihrer Ziele anstreben müssen, besser zu werden. Für diejenigen, die sich dem Grinding verweigern, kann das Spielerlebnis eher beeinträchtigt werden. 
 
-\subparagraph{Playing by Appointment} verlangt vom Spieler, zu einem bestimmten, vom Spiel festgelegten Zeitpunkt das Spiel wieder aufzunehmen. In einigen Fällen droht dem Spieler ansonsten der Fortschritt, den er in einem Spiel gemacht hat.\newline
+\paragraph{Playing by Appointment} verlangt vom Spieler, zu einem bestimmten, vom Spiel festgelegten Zeitpunkt das Spiel wieder aufzunehmen. In einigen Fällen droht dem Spieler ansonsten der Fortschritt, den er in einem Spiel gemacht hat.\newline
 In \textit{FarmVille} zum Beispiel, einem beliebten Social Network Game, werden Pflanzen gesät, um Punkte und Ressourcen zu erhalten, und diese müssen zu einem bestimmten Zeitpunkt (nach genau 24 Stunden) geerntet werden, bevor sie auf Anhieb verwelken. Der Spieler wird also dazu verpflichtet, seinen Tagesablauf dementsprechend anzupassen.
 
-\paragraph{Monetary Dark Patterns}
+\subsubsection{Monetary Dark Patterns}
 Spieler sollen dazu gebracht werden, mehr Geld auszugeben als erwartet oder erhofft. Kann zu Reuegefühlen, Verlust von Zeitgefühl und zu Geldverlust führen.\newline
 Nicht zu verwechseln mit Glücks- oder Wettspielen.
 
-\subparagraph{Pay to Skip} ist ein Konzept, das zu Arcade-Zeiten der 80er Jahre vertraut war, in dem man zum Fortfahren des Spiels eine Münze in den Automaten werfen musste. Heutzutage tritt dieses Dark Pattern oft in Free-to-play Games\footnote{\label{foot:10} Free-to-play Games sind grundsätzlich kostenlos spielbar und beinhalten oft kostenpflichtige Inhalte oder Werbung.} und Social Media Games auf. Es sieht vor, dass Spieler Geld ausgeben, um in einem Spiel voranzukommen.\newline
+\paragraph{Pay to Skip} ist ein Konzept, das zu Arcade-Zeiten der 80er Jahre vertraut war, in dem man zum Fortfahren des Spiels eine Münze in den Automaten werfen musste. Heutzutage tritt dieses Dark Pattern oft in Free-to-play Games\footnote{\label{foot:10} Free-to-play Games sind grundsätzlich kostenlos spielbar und beinhalten oft kostenpflichtige Inhalte oder Werbung.} und Social Media Games auf. Es sieht vor, dass Spieler Geld ausgeben, um in einem Spiel voranzukommen.\newline
 Bei dem Augmented Reality Spiel \textit{Harry Potter: Wizards Unite} kann eine bestimmte Aktion nur mit einer Währung innerhalb des Spiels ausgeführt werden, und wenn diese aufgebraucht ist, muss man entweder ein sog. Gasthaus besuchen, oder (wenn kein Gasthaus in der Nähe ist) darauf warten, dass der Timer abgelaufen ist und der Spieler einen vom Spiel festgelegten Betrag der Währung erhält. Die Hauptfunktion des Spiels ist während dieser Wartezeit nicht verfügbar, somit ist das Weiterspielen unmöglich. Der Spieler kann diesen Timer mit Echtgeld überspringen.
 
-\subparagraph{Pre-Delivered Content} bedeutet, wenn trotz Erwerben eines Spiele-Exemplars bestimmte Inhalte oder Funktionen erst mit Zahlung einer Gebühr freigeschaltet werden müssen. Der Spieler bekommt dadurch das Gefühl, ein unvollständiges Spiel erworben zu haben.\newline
+\paragraph{Pre-Delivered Content} bedeutet, wenn trotz Erwerben eines Spiele-Exemplars bestimmte Inhalte oder Funktionen erst mit Zahlung einer Gebühr freigeschaltet werden müssen. Der Spieler bekommt dadurch das Gefühl, ein unvollständiges Spiel erworben zu haben.\newline
 Die aktuellen Spiele der \textit{Tekken}-Serie bietet mehrere spielbare Charaktere an, von denen viele erst gegen eine Gebühr ausgewählt werden können. 
 
 
-\subparagraph{Monetized Rivalries} wird auch als \textit{Pay to Win} bezeichnet und steht im Zusammenhang mit \textit{Grinding}. In manchen Spielen kommt es vor, dass das Ansammeln von In-Game Währungen so langsam voran geht, dass sich ein Spieler sehr lange mit Grinding beschäftigen muss, um die für das Weiterkommen notwendigen Gegenstände freischalten zu können.\newline
+\paragraph{Monetized Rivalries} wird auch als \textit{Pay to Win} bezeichnet und steht im Zusammenhang mit \textit{Grinding}. In manchen Spielen kommt es vor, dass das Ansammeln von In-Game Währungen so langsam voran geht, dass sich ein Spieler sehr lange mit Grinding beschäftigen muss, um die für das Weiterkommen notwendigen Gegenstände freischalten zu können.\newline
 Ein Spieler kann sich, vor allem bei Wettkämpfen, durch Cheat Codes\footnote{\label{foot:11} Cheat Codes oder Cheats sind Einflussmöglichkeiten auf den Spielverlauf, die ursprünglich nicht vorgesehen sind und werden von Spielern verwendet, die ein Spiel zu ihren Gunsten manipulieren wollen.} oder schwer zu bekommende Gegenstände Vorteile gegenüber anderen Spielern verschaffen, indem er Echtgeld in eine In-Game Währung investiert. Somit können Top-Ränge und die damit verbundenen Bonusinhalte erreicht werden, wenn mit Echtgeld immer wieder Upgrades oder neueste Gegenstände erworben werden, während es weniger zahlungsfähigen Spielern unmöglich gemacht wird, eine Position in der Bestenliste zu erreichen.\newline
 In dem Social Media Game \textit{Candy Crush Saga} ist es für den Spieler erforderlich, Geld im Spiel zu kaufen, um gegenüber seinen Facebook-Freunden konkurrenzfähig zu bleiben.  
 
-\paragraph{Social Capital-Based Dark Patterns}
+\subsubsection{Social Capital-Based Dark Patterns}
 Spieler erhalten starke Anreize, wie Boni und Vorteile im Spiel, wenn sie ihre Freunde und Familienmitglieder zum Spielen einladen.
 
-\subparagraph{Social Pyramid Schemes} macht Gebrauch von den Beziehungen des Spielers, bei dem dieser pro eingeladenem Freund Spiele-Vorteile bekommt. Oft werden bestimmte Funktionen erst freigeschaltet, wenn man eine bestimmte Anzahl an Freunden hinzugefügt hat.
+\paragraph{Social Pyramid Schemes} macht Gebrauch von den Beziehungen des Spielers, bei dem dieser pro eingeladenem Freund Spiele-Vorteile bekommt. Oft werden bestimmte Funktionen erst freigeschaltet, wenn man eine bestimmte Anzahl an Freunden hinzugefügt hat.
 
-\subparagraph{Impersonation} wird vor allem in Social Network Games genutzt und ist vergleichbar mit Brignull's \textit{Friend Spam}. Hier werden die Namen aus der Kontaktliste des Spielers für Benachrichtigungen an ihn selbst verwendet. So erhält ein Spieler zum Beispiel eine Nachricht über ein Geschenk eines Freundes, obwohl dieser Freund eine solche Aktion gar nicht ausgeführt hat. Somit wird der Spieler dazu motiviert, das Spiel (weiter) zu spielen. Der Spieler kann sich dadurch auch verpflichtet fühlen, ein Geschenk zurück zu senden.
+\paragraph{Impersonation} wird vor allem in Social Network Games genutzt und ist vergleichbar mit Brignull's \textit{Friend Spam}. Hier werden die Namen aus der Kontaktliste des Spielers für Benachrichtigungen an ihn selbst verwendet. So erhält ein Spieler zum Beispiel eine Nachricht über ein Geschenk eines Freundes, obwohl dieser Freund eine solche Aktion gar nicht ausgeführt hat. Somit wird der Spieler dazu motiviert, das Spiel (weiter) zu spielen. Der Spieler kann sich dadurch auch verpflichtet fühlen, ein Geschenk zurück zu senden.
 
 \subsection{Proxemische Interaktions-Systeme}
 \label{sub:proxemische_interaktions-systeme}{}
@@ -488,11 +440,7 @@ Ein proxemisches System zwingt eine Person, durch einen bestimmten Ort zu gehen 
 Ähnlich wie in Supermärkten, wo Produkte strategisch platziert sind, um die Sichtbarkeit von bestimmten, promoteten Gegenständen und somit Impulskäufe zu erhöhen, können proxemische Interaktionen dafür sorgen, dass in Zonen bestimmte Funktionalitäten unzugänglich sind, damit Menschen sich zu bestimmten Orten begeben.\newline
 In Japan etwa gibt es Getränkeautomaten, die, wenn man weit weg steht, Werbebilder zeigen, angepasst an die aktuelle Jahreszeit, Temparatur und Tageszeit. Erst, wenn man sich dem Automaten nähert, kann man erkennen, welche Getränke angeboten werden. Demographische und Verkaufs-Daten werden ohne Einwilligung auf dem Firmenserver hochgeladen und für Analysen und zu Marketing-Zwecken verwendet.
 
-
-\subsection{Künstliche Intelligenz}
-\label{sub:kuenstliche_intelligenz}
-
-\subsubsection{Home Robots}
+\subsection{Home Robots}
 \label{sub:home_robots}
 
 \section{Schluss}
