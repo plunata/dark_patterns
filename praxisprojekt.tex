@@ -2,10 +2,9 @@
 
 \usepackage[english, ngerman]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{epigrafica}
-\usepackage[LGR,OT1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{filecontents}
 \usepackage{multirow}
 \usepackage{booktabs}
@@ -21,7 +20,6 @@
 \usepackage{sectsty}
 \usepackage{titlecaps}
 \usepackage{titlesec}
-\usepackage{accanthis}
 \usepackage{palatino}
 \usepackage[defaultsans]{droidsans}
 
@@ -34,9 +32,9 @@
 \renewcommand\thesubsection{\arabic{subsection}}
 
 
-\titleformat*{\section}{\normalfont\Large\bfseries\epigrafica}
-\titleformat*{\subsection}{\normalfont\large\bfseries\epigrafica}
-\titleformat{\subsubsection}[hang]{\normalfont\Large\bfseries\epigrafica}{\thesubsubsection}{1em}{}%TODO
+%\titleformat*{\section}{\normalfont\Large\bfseries\epigrafica}
+%\titleformat*{\subsection}{\normalfont\large\bfseries\epigrafica}
+%\titleformat{\subsubsection}[hang]{\normalfont\Large\bfseries\epigrafica}{\thesubsubsection}{1em}{}%TODO
 
 
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -149,6 +147,7 @@ Brignull's 12 Typen von Dark Patterns werden von Gray et al. in Kategorien einge
 Im Folgenden wird erläutert, was unter den einzelnen Kategorien zu verstehen ist und wie die Taxonomie von Brignull in diese einzuordnen ist. Diese Praktiken finden allgemein in der Gestaltung von digtalen Benutzeroberflächen Anwendung.
 
 \subsubsection{Nagging}
+\label{sssec:nagging}
 Während der Interaktion mit dem System wird der Nutzer ein- oder mehrmals entgegen seiner Erwartung umgeleitet und bei der Aufgabenerledigung unterbrochen. Dabei hat die Unterbrechung für den Nutzer keine Relevanz. Diese treten meist in den folgenden Formen auf:
 \begin{enumerate}[label=\arabic*)]
 	\item{Pop-Ups, die den Zugriff auf das Interface sperren,}
@@ -157,76 +156,97 @@ Während der Interaktion mit dem System wird der Nutzer ein- oder mehrmals entge
 \end{enumerate}
 
 \subsubsection{Obstruction} 
+\label{sssec:obstruction}
 Die Erledigung der Aufgaben wird so erschwert, dass der Nutzer davon abgebracht wird. Ein mögliches Vorkommnis ist, dass der Nutzer in dem Moment, wo er auf die Barriere stößt, über die Beschränkung der nutzbaren Funktionen benachrichtigt wird. Der Nutzer muss diese Funktionen also erst freischalten.	
 
 \paragraph{Roach Motel (Brignull)} 
+\label{para:roach_motel}
 Führt den Nutzer auf einen langen Pfad und ruft gleichzeitig eine Disorientierung durch unklare Formulierungen hervor. Der Nutzer gerät hier leicht in eine Situation und kommt nur schwer aus dieser Lage heraus. Dies geschieht beim Abonnieren eines Services oder der Registrierung bei einem Service, indem es dem Nutzer schwer oder sogar unmöglich gemacht wird, diesen Service wieder abzubestellen oder das Konto zu löschen.
 
 \paragraph{Price Comparison Prevention (Brignull)} 
+\label{para:price_comparison_prevention}
 Hindert den Nutzer daran, Preise von Produkten und Dienstleistungen zu vergleichen. Dies kann zum Beispiel der Fall sein, wenn es dem Nutzer nicht möglich ist, Produktinformationen zu kopieren, um damit Suchanfragen stellen zu können.
 % Kommentar von Dome: Außerdem: Andere Dinge zum Kauf hinzufügen. Also "Sets" anbieten. Bsp: Kaufst x, kriegst aber y dazu. Bei anderem Anbieter x aber z zusätzlich.
 
 \paragraph{Intermediate Currency (Gray et al.)} 
+\label{para:intermediate_currency}
 Der Nutzer wird gezwungen, echtes Geld in eine virtuelle Währung zu investieren, damit er Käufe tätigen kann. Oft kommt dies in Apps vor, die In-App Käufe anbieten.
 
 \subsubsection{Sneaking}
+\label{sssec:sneaking}
 Relevante Informationen werden vor dem Nutzer versteckt oder verschleiert, oder die Anzeige der Information wird verzögert. Ziel ist es, den Nutzer dazu zu führen, eine Aktion auszuführen, die in der Regel nicht in seinem Interesse ist, wenn er Kenntnis davon hätte. Dazu zählen versteckte Kosten oder unerwünschte Effekte durch die Ausführung einer bestimmten Aktion.
 
 \paragraph{Forced Continuity (Brignull)}
+\label{para:forced_continuity}
 Wenn ein Nutzer eine Frist versäumt, soll dies ausgenutzt werden. Oft wird der Nutzer hier zur Kasse gebeten werden, wenn ein Service automatisch erneuert wird, weil dieser nicht rechtzeitig vor Ablauf einer Probezeit gekündigt wurde.
 
 \paragraph{Hidden Costs (Brignull)} 
+\label{para:hidden_costs}
 Versteckte Kosten werden erst später offenbart, nachdem ein potentieller Kunde mit einem besonderen Angebot angelockt wurde. Wird dieser beispielsweise kurz vor dem Abschluss eines Bestellvorgangs darauf hingewiesen, dass das Angebot zeitlich begrenzt ist oder diverse Gebühren, Steuern oder hohe Liefergebühren anfallen, so kann das auf dieses Dark Pattern hinweisen. 
 
 \paragraph{Sneak into Basket (Brignull)}
+\label{para:sneak_into_basket}
 Dem Nutzer wird ohne sein Wissen automatisch ein Artikel in den Warenkorb gelegt, was unbemerkt bleiben kann, wenn der Nutzer seine Einkaufsliste vor der Bestellung nicht überprüft. Oft basieren solche Artikel angeblich auf einer Empfehlung für den Kunden.
 
 \paragraph{Bait and Switch (Brignull)}
+\label{para:bait_and_switch}
 Gewohnte Interaktionselemente einer Applikation führen zu einem unerwarteten und unerwünschten Ergebnis. 
 Für Aufsehen sorgte beispielsweise Microsoft im Jahr 2016, als Nutzer von älteren Windows-Versionen dazu gedrängt wurden, das Betriebssystem auf Windows 10 zu aktualisieren \cite{thurrott}. Ein Schließen der Meldung durch den entsprechenden Button führte zwar zum Schließen des Fensters, allerdings war den Nutzern nicht bewusst, dass sie dabei gegen ein Upgrade auf Windows 10 keinen Widerspruch eingelegt haben. Daraufhin wurde bei diesen Nutzern zu einem von Windows festgelegten Zeitpunkt das Upgrade durchgeführt. 
 %Bild von Windows 10 Upgrade einfügen?
 
 \subsubsection{Interface Interference}
+\label{sssec:interface_interference}
 Sobald bestimmte Aktionen, die überdeckt werden von anderen Aktionen, den Nutzer bei der Erledigung seiner Aufgaben stören oder die Sichtbarkeit von Aktionen oder Informationen beschränken, spricht man von Interface Interference. 
 Gray \cite{gray} unterscheidet dabei zwischen \textit{Hidden Information}, \textit{Preselection} und \textit{Aesthetic Manipulation}. 
 
 \paragraph{Hidden Information}
+\label{para:hidden_information}
 Sorgt dafür, dass wichtige Informationen nur schwer auffindbar und lesbar sind. Demnach bekommt der Nutzer das Gefühl vermittelt, als seien die Informationen für ihn nicht von Bedeutung. Oft sind diese dargestellt als Optionen oder als Kleingedrucktes, verblasster Text oder in Form von schwer verständlichen Geschäfts-bedingungen.
 
 \paragraph{Preselection}
+\label{para:preselection}
 Eine Option in einem Dialog ist von Anfang an ausgewählt, noch bevor der Nutzer eine eigene Auswahl getroffen hat. Meistens entspricht die Auswahl nicht dem Interesse oder der Absicht des Nutzers, sofern er keine Anpassungen vornimmt. Oft geht er in dem Fall dennoch davon aus, dass die Vorauswahl im besten Interesse des Nutzers ist. 
  
 \paragraph{Aesthetic Manipulation (Gray et al.)}
+\label{para:aesthetic_manipulation}
 Die Form der Benutzeroberfläche wird so gestaltet, dass die Aufmerksamkeit des Nutzers auf etwas anderes gelenkt oder dass er von etwas anderem überzeugt wird. Brignull hat dieses Dark Pattern als \glqq Misdirection\grqq{} bezeichnet. 
 Darunter fallen die Dark Patterns \textit{Toying with Emotions}, \textit{False Hierarchy}, \textit{Disguised Ad} und \textit{Trick Question}.
 
 \subparagraph{Toying with Emotions (Gray et al.)} 
+\label{subpara:toying_with_emotions}
 setzt Elemente wie Farben, Sprache oder Schreibstil gezielt dafür ein, Emotionen hervorzurufen, um den Nutzer dazu zu bringen, eine bestimmte Aktion auszuführen. Hier kommen unter anderem niedliche \todo{zu viel oder XD} oder furchteinflößende Bilder, oder verlockende oder Angst machende Formulierungen zum Einsatz. Zum Beispiel kann es sich bei einem Angebot einer zeitnahen Lieferung nur um eine zeitlich begrenzte Garantie handeln, was den Nutzer unter Druck setzen kann, seinen Einkauf zügig abzuschließen. Nachforschungen von Gray zeigen allerdings, dass der Timer oft neugestartet wird, nachdem die Zeit um ist. 
 
 \subparagraph{False Hierarchy (Gray et al.)}
+\label{subpara:false_hierarchy}
 erschwert dem Nutzer während eines Dialogs die Interaktion mit bestimmten Optionen oder bestimmte Optionen werden visuell anders dargestellt und vom Nutzer kaum wahrgenommen. So kann der Nutzer davon ausgehen, dass seine Auswahlmöglichkeiten beschränkt sind oder dass eine bestimmte Option für den Nutzer die bessere ist. Ein Beispiel hierfür ist die Installation von manchen Desktop-Anwendungen, bei der zu Beginn die Optionen einer (empfohlenen) Express-Installation und einer erweiterten, jedoch ausgegrauten Installation aufgelistet werden.
 
 \subparagraph{Disguised Ad (Brignull)}
+\label{subpara:disguised_ad}
 versteckt eine Werbung hinter einem Navigationselement oder einem Inhalt, die nicht klar als solche gekennzeichnet ist und den Nutzer anlocken soll.
 Dies kann ein interaktives Spiel, ein Download-Button oder ein anderes hervorstechendes Interaktionselement sein, die den Nutzer dann auf eine andere Seite umleitet.
 
 \subparagraph{Trick Question (Brignull)}
+\label{subpara:trick_question}
 verwendet eine Frage, die doppelte Negation oder missverständliche Formulierungen enthält. Liest der Nutzer sich die Frage nicht gründlich durch, macht die Frage nur den Anschein, als wäre sie das, was der Nutzer erwartet. Mit diesem Trick wird der Nutzer dazu gebracht, mit seiner Auswahl eine Zustimmung zu geben, die nicht in seinem Interesse ist. 
 
 \subsubsection{Forced Action}
+\label{subpara:forced_action}
 Der Nutzer muss eine Aktion ausführen, um (weiterhin) Zugang zu bestimmten Funktionen zu bekommen. Oft ist dies verbunden mit einem Vorgang, der nur dann abgeschlossen werden kann. Die obligatorische Aktion kann auch verschleiert werden als etwas, von dem der Nutzer angeblich profitieren würde. 
 Als Beispiel gibt Gray et al. \cite{gray} Windows 10 an, das den Nutzer zwingt, beim Herunterfahren oder Neustarten des Rechners ein Update durchzuführen.  
 
 \paragraph{Social Pyramid (Gray et al.)}
+\label{para:social_pyramid}
 Ein Service kann erst dann (vollumpfänglich) genutzt werden, wenn der Nutzer andere eingeladen hat. Dies kommt oft bei sozialen Anwendungen oder Online-Games vor. 
 
 Brignull's \textit{Friend Spam} steht mit diesem Dark Patterns im Zusammenhang. Hierbei wird der Nutzer nach einer Zugriffsberechtigung für sein E-Mail Konto oder sein Konto auf einem Sozialen Netzwerk gefragt, unter dem Vorwand, ihm einen Vorteil zu verschaffen (wie zum Beispiel das Finden von Freunden zur Erweiterung seines Netzwerks bei diesem Service). Allerdings können die Kontaktdaten missbraucht werden, um im Namen des Nutzers Einladungen zu versenden, ohne dass der Nutzer davon Kenntnis hat.
 Ein bekannt gewordenes Beispiel dafür war LinkedIn, die eine zeitlang von ebendieser Methode Gebrauch gemacht haben, bis sie im Jahr 2015 ein Gerichtsverfahren verloren und diese Methode daraufhin in Kalifornien als illegal erklärt wurde \cite{brignull5}.   
 
 \paragraph{Privacy Zuckering (Brignull)}
+\label{para:privacy_zuckering}
 Der Nutzer wird dazu gebracht, mehr persönliche Informationen als gewollt oder notwendig preiszugeben. Diese Informationen werden dann oft an Dritte verkauft. Erst bei Durchsehen der Geschäftsbedingungen oder der Datenschutzerklärung wird dies dem Nutzer bewusst.
 
 \paragraph{Gamification (Gray et al.)}
+\label{para:gamification}
 Der Nutzer wird zur wiederholten Nutzung des Services gezwungen, damit er mit bestimmten Funktionen des Services belohnt wird. Solange kann er den Service nicht im vollen Umfang benutzen. 
 
 
@@ -247,53 +267,68 @@ Mathur et al. erläutert, wie verbreitet Dark Patterns in Online-Shops sind und 
 Nachfolgend werden die von Mathur et al. festgelegten Kategorien kurz erläutert. Einige Typen von Dark Patterns, die in Online-Shops vorkommen, wurden bereits von Gray et al. beschrieben, demnach werden diese hier nicht näher erklärt. 
 
 \subsubsection{Sneaking}
-siehe Kapitel I.2.4.3 
-\todo{Verlinkung hinzufügen}
-
-\paragraph{Sneak into Basket}
-siehe gleichnamigen Abschnitt unter Kapitel I.2.4.3 
-\todo{Verlinkung hinzufügen}
+\label{sssec:sneaking2}
+(siehe \hyperref[sssec:sneaking]{I.2.3})
 
 \paragraph{Hidden Costs}
-siehe gleichnamigen Abschnitt unter Kapitel I.2.4.3 
-\todo{Verlinkung hinzufügen}
+\label{para:hidden_costs2}
+(siehe \hyperref[para:hidden_costs]{I.2.3.2})
 
-\paragraph{Hidden Subscription (Mathur et al.)} fällt unter die Kategorie \textit{Sneaking} und taucht oft in Verbindung mit \textit{Hard to Cancel} auf. 
+\paragraph{Sneak into Basket}
+\label{para:sneak_into_basket2}
+(siehe \hyperref[para:sneak_into_basket]{I.2.3.3}) 
+
+\paragraph{Hidden Subscription (Mathur et al.)}
+\label{para:hidden_subscription}
+fällt unter die Kategorie \textit{Sneaking} und taucht oft in Verbindung mit \textit{Hard to Cancel} auf. 
 
 Der Nutzer wird wiederholt zur Kasse gebeten unter dem Vorwand einer einmaligen Gebühr oder einer Probezeit. Dass das Abonnement laufend erneuert wird, fällt dem Nutzer erst nach Empfangen einer Rechnung auf.  
 
 \subsubsection{Urgency}
+\label{sssec:urgency}
 
 Der Kunde wird dazu gedrängt, eine Kaufentscheidung zu treffen, indem eine Deadline auf Sales oder Schnäppchen gesetzt wird. 
 
 Kombiniert mit \textit{Social Proof} und \textit{Scarcity} kann dies potentiell einen FoMO-Effekt\footnote{\label{foot:4} FoMO steht für \textit{Fear of Missing Out} (dt. Angst, etwas zu verpassen) und beschreibt die Befürchtung davor, nicht auf dem aktuellsten Stand zu sein.} auslösen.
 
-\paragraph{Countdown Timer} zeigt bei einem Angebot einen Timer an, der aussagt, wie viel Zeit noch verbleibt, bis eine Deadline verstrichen ist. \textit{Deceptive Countdown Timer} sollen den Nutzer eine Deadline vortäuschen und werden aktiviert, sobald die Seite besucht wird. Bei einem erneutem Besuch oder Aktualisieren der Seite wird der Timer erneut gestartet.
+\paragraph{Countdown Timer}
+\label{para:countdown_timer}
+zeigt bei einem Angebot einen Timer an, der aussagt, wie viel Zeit noch verbleibt, bis eine Deadline verstrichen ist. \textit{Deceptive Countdown Timer} sollen den Nutzer eine Deadline vortäuschen und werden aktiviert, sobald die Seite besucht wird. Bei einem erneutem Besuch oder Aktualisieren der Seite wird der Timer erneut gestartet.
 
-\paragraph{Limited-time Messages} erzeugt durch die Angabe eines ablaufenden oder befristeten Angebots Zeitdruck beim Nutzer, ohne eine konkrete Deadline zu nennen.
+\paragraph{Limited-time Messages}
+\label{para:limited_time_message}
+erzeugt durch die Angabe eines ablaufenden oder befristeten Angebots Zeitdruck beim Nutzer, ohne eine konkrete Deadline zu nennen.
 
 \subsubsection{Misdirection}
+\label{sssec:misdirection}
 Definiert wurde dieses Dark Pattern von Brignull und hat Ähnlichkeit mit Gray's \textit{Interface Interference}.
 Hierbei werden visuelle, sprachliche und emotionale Signale versendet, um den Nutzer zu einer Entscheidung zu bewegen oder von einer Entscheidung abzuhalten. Bestimmte affektive oder kognitive Eigenschaften des Menschen sollen ausgenutzt werden, ohne tatsächlich die Auswahlmöglichkeiten des Nutzers einzuschränken.
 
 \paragraph{Confirmshaming}
+\label{para:confirmshaming}
 Der Begriff wurde bereits von Brignull beschrieben und erinnert an Gray's \textit{Toying with Emotions}. 
 Mithilfe von Sprache sollen Emotionen im Nutzer geweckt werden, um den Nutzer von einer Entscheidung abzubringen. Meist geschieht das in Form von Pop-up Dialogen, die den Nutzer mit Rabatten anlocken und zur Eingabe der E-Mail Adresse auffordern. Lehnt der Nutzer das Angebot ab, werden absichtlich Scham-Gefühle oder der Framing-Effekt\footnote{\label{foot:5} Die Entscheidung einer Person ist abhängig von der Formulierung einer Aussage, auch wenn es sich hierbei um dieselbe Information handelt. Dies wird Framing-Effekt genannt.}  ausgelöst.
 
 \paragraph{Visual Interference}
+\label{para:visual_interference}
 Dieses Dark Pattern ist wiederzuerkennen in Gray's \textit{False Hierarchy}. 
 Durch Stil und visuelle Darstellung wird eine Auswahl auffälliger gestaltet als andere Auswahlmöglichkeiten, sodass der Nutzer eher dazu tendiert, eine bestimmte Auswahl zu treffen.
 
 \paragraph{Trick Question}
+\label{para:trick_question}
 Wie bereits in 2.4.4 im Abschnitt \textit{Interface Interference} erläutert, soll der Nutzer mithilfe von verwirrender Sprache dazu bewegt werden, eine bestimmte Entscheidung oder Auswahl zu treffen. Dies soll verhindern, dass er sich von einem Service (z.B. einem Newsletter) abmeldet. Der Nutzer geht davon aus, dass diese Auswahl seinen Präferenzen entspricht, was sowohl auf den Framing-Effekt, als auch auf den Default-Effekt\footnote{\label{foot:6} Der Default-Effekt bezeichnet die Tendenz eines Menschen, eine vorausgewählte Entscheidung bzw. Option zu bevorzugen.} abzielt.
 
-\paragraph{Pressured Selling} setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt, den Anker-Effekt\footnote{\label{foot:7} Beim Anker-Effekt basiert eine Entscheidung eines Menschen auf einer anfänglich angebotene Information, dem \glqq Anker\grqq{}.} und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
-
+\paragraph{Pressured Selling}
+\label{para:pressured_selling}
+setzt den Nutzer unter Druck, eine teurere Version eines Produkts (Upselling) oder verwandte Produkte (Cross-Selling) zu kaufen. Nutzt kognitive Verhaltensweisen des Nutzers aus, wie den Default-Effekt, den Anker-Effekt\footnote{\label{foot:7} Beim Anker-Effekt basiert eine Entscheidung eines Menschen auf einer anfänglich angebotene Information, dem \glqq Anker\grqq{}.} und das Gefühl von Knappheit, um den Kunden zum Kauf zu bewegen.
 
 \subsubsection{Social Proof}
+\label{sssec:social_proof}
 Nutzer orientieren sich an dem Verhalten anderer Nutzer. Dies wird ausgenutzt, um die Entscheidungsfindung und Käufe der Nutzer zu beschleunigen (Mitläufereffekt\footnote{\label{foot:5} Der Mitläufereffekt sagt aus, dass Menschen dazu neigen, sich in ihrem Verhalten, ihrem Stil oder ihrer Einstellung nach anderen zu richten.}).
 
-\paragraph{Activity Notifications} zeigt die Aktivität anderer Nutzer bei einem Artikel an. Folgende Varianten treten dabei (oft in Kombination) auf: 
+\paragraph{Activity Notifications}
+\label{para:activity_notifications}
+zeigt die Aktivität anderer Nutzer bei einem Artikel an. Folgende Varianten treten dabei (oft in Kombination) auf: 
 \begin{enumerate}[label=\arabic*)]
 	\item{Namen von Nutzern, die dieses Produkt ebenfalls gekauft haben,}
 	\item{Wie viele Nutzer dieses Produkt im Einkaufswagen liegen haben,}
@@ -301,23 +336,33 @@ Nutzer orientieren sich an dem Verhalten anderer Nutzer. Dies wird ausgenutzt, u
 \end{enumerate}
 Dies soll Aufmerksamkeit erzeugen und taucht oft regelmäßig auf, ohne dass sich die numerischen Werte verändern. \textit{Deceptive Activity Notifications} generiert falsche, zufällige Nummern oder verwendet andere täuschende Aussagen durch die Erzeugung fester Werte.
 
-\paragraph{Testimonials of Uncertain Origin} listet Nutzer-Empfehlungen und -Bewertungen von einem Produkt auf, bei denen nicht genau nachvollziehbar ist, woher sie stammen oder wie sie erstellt oder mitgeteilt wurden. 
+\paragraph{Testimonials of Uncertain Origin}
+\label{para:testimonials_of_uncertain_origin}
+listet Nutzer-Empfehlungen und -Bewertungen von einem Produkt auf, bei denen nicht genau nachvollziehbar ist, woher sie stammen oder wie sie erstellt oder mitgeteilt wurden. 
 
 \subsubsection{Scarcity}
+\label{sssec:scarcity}
 Zeigt für ein Produkt eine begrenzte Verfügbarkeit oder eine starke Nachfrage an. So kann der Wert des Produkts aus Sicht des Nutzers und der Wunsch nach ebendiesem Produkt erhöht werden.
 
-\paragraph{Low-stock Messages} signalisiert dem Nutzer, dass nur noch eine begrenzte Anzahl eines Produkts verfügbar ist. Dies kann zu Unsicherheit, einem erhöhten Wunsch nach einem Produkt und zu Impulskäufen führen. \textit{Deceptive Low-stock Messages} gibt Auskunft über einen verringerten Vorrat eines Produkts, wobei der angegebene Wert immer wiederkehrt und fest geplant ist. Es kann auch eine zufällige Nummer generiert werden, sobald die Seite neu geladen wird. 
+\paragraph{Low-stock Messages}
+\label{para:low_stock_messages}
+signalisiert dem Nutzer, dass nur noch eine begrenzte Anzahl eines Produkts verfügbar ist. Dies kann zu Unsicherheit, einem erhöhten Wunsch nach einem Produkt und zu Impulskäufen führen. \textit{Deceptive Low-stock Messages} gibt Auskunft über einen verringerten Vorrat eines Produkts, wobei der angegebene Wert immer wiederkehrt und fest geplant ist. Es kann auch eine zufällige Nummer generiert werden, sobald die Seite neu geladen wird. 
 
-\paragraph{High-demand Messages} zeigt dem Nutzer die Begehrtheit eines Produkts an. So bekommt er den Eindruck vermittelt, dass das Produkt wahrscheinlich bald ausverkauft sein wird. Manchmal werden diese Werte jedoch willkürlich festgelegt und erscheinen beim Neuladen der Seite oder beim Betrachten eines anderen Produkts immer wieder.
+\paragraph{High-demand Messages}
+\label{para:high_demand_messages}
+zeigt dem Nutzer die Begehrtheit eines Produkts an. So bekommt er den Eindruck vermittelt, dass das Produkt wahrscheinlich bald ausverkauft sein wird. Manchmal werden diese Werte jedoch willkürlich festgelegt und erscheinen beim Neuladen der Seite oder beim Betrachten eines anderen Produkts immer wieder.
 
-\paragraph{Hard to Cancel (Mathur et al.)} zählt zu \textit{Obstruction} und ähnelt Brignull's Beschreibung von \textit{Roach Motel}. 
-
+\paragraph{Hard to Cancel (Mathur et al.)}
+\label{para:hard_to_cancel}
+zählt zu \textit{Obstruction} und ähnelt Brignull's Beschreibung von \textit{Roach Motel}.\newline
 Dem Nutzer ist nicht bewusst, dass er Mitglied oder Service-Abonnent geworden ist. Oft wird dem Nutzer das Gefühl vermittelt, jederzeit kündigen zu können, jedoch stellt sich dann beim Lesen der Geschäftsbedingungen heraus, dass man dies nur über einen umständlichen Weg, wie einem Anruf beim Kundenservice, bewerkstelligen kann. 
 
 \subsubsection{Forced Action}
+\label{sssec:forced_action2}
 siehe 2.4.5 \textit{Forced Action} definiert von Gray et al.
 
 \paragraph{Forced Enrollment}
+\label{para:forced_enrollment}
 Verpflichtet den Nutzer dazu, sich zu Marketing-Kommunikationszwecken (z.B. Newsletter) anzumelden oder ein Konto anzulegen, um ihn zur Preisgabe von Informationen zu verleiten. So muss er mit der Zustimmung der Geschäftsbedingungen auch dem Empfang von Marketing-E-Mails erlauben. Meistens werden dafür Checkboxen verwendet.
 
 \subsection{Social Media Plattformen}
@@ -338,64 +383,84 @@ Für einzelne Kategorien werden Beispiele aufgezählt, die in Mobilen Apps Verwe
 
 
 \subsubsection{Immortal Accounts (Bösch et al.)}
+\label{sssec:immortal_accounts}
 % Obstruction
 Dem Nutzer wird es erschwert oder sogar unmöglich gemacht, sein Konto zu löschen. Zudem kann die Löschung vorgetäuscht werden, während in Wirklichkeit (einige) persönliche Daten behalten werden. Letztendlich können die Barrieren dazu führen, dass der Nutzer sich dagegen entscheidet, sein Konto zu löschen, um sich unnötige Mühen zu ersparen. 
 
 \subsubsection{Hidden Legalese Stipulations}
+\label{sssec:hidden_legalese_stipulations}
 % Interface Interference
 Geschäftsbedingungen sind oft zu lang gestaltet und schwer verständlich formuliert. Aufgrund dessen lesen viele Nutzer diese nicht, wodurch er angreifbar wird, wenn er den Bedingungen dennoch zustimmt. Denn es können Klauseln in den Geschäftsbedingungen versteckt sein und oftmals ohne Vorankündigung verändert werden.  
 
 \subsubsection{Bad Defaults}
+\label{sssec:bad_defaults}
 % Interface Interference
 Standard-Optionen werden so gesetzt, dass der Nutzer dazu angeregt werden soll, seine persönlichen Informationen mit dem Service zu teilen. Die meisten Menschen haben keine Zeit, um alle Konfigurationen zur Privatsphäre durchzugehen und an seine Bedürfnisse anzupassen. Infolgedessen geben Nutzer oft mehr über sich preis, als sie beabsichtigen, wie Informationen über den Online-Status, Teile des Nutzerprofils oder Seitenbesuche. Dieses Dark Pattern wird meistens verwendet auf Web- und mobilen Applikationen, vor allem in Sozialen Netzwerken.  
 
 % Forced Action
 \subsubsection{Privacy Zuckering}
+\label{sssec:privacy_zuckering2}
 siehe \textit{Forced Action} in Abschnitt I.2.4.5
 
 \subsubsection{Address Book Leeching}
+\label{sssec:address_book_leeching}
 Der Nutzer wird nach Zugriffsrechten auf sein Adressbuch gefragt, damit er sich mit seinen Kontakten verbinden kann. Jedoch werden die Kontaktdaten intern gespeichert und für die Weiterverarbeitung genutzt, ohne dass der Nutzer darüber in Kenntnis gesetzt wird. Die Kontakte erhalten Einladungen oder Werbung, die oft im Namen des Nutzers versendet werden. Die Daten können auch genutzt werden, Profile zu erstellen und Individuen zu tracken.\newline
 Dieses Dark Pattern hängt mit Brignull's \textit{Friend Spam} zusammen. \todo{erläutern?}
 
 \subsubsection{Shadow User Profiles}
+\label{sssec:shadow_user_profiles}
 Daten über unregistrierte Personen können ohne ihre Zustimmung und ihr Wissen gesammelt und aufgezeichnet werden. Diese Informationen erhält der Dienstleister von importierten Adressbüchern registrierter Nutzer (z.B. via \textit{Address Book Leeching}), Metadaten oder Erwähnungen und können dazu genutzt werden, um Algorithmen zu verbessern, wie die Empfehlung von Kontakten oder Ad Targeting.
-
 
 \subsection{Games}
 \label{sub:games}
 \todo{DPs in Games beschreiben}
 
-
 \subsubsection{Temporal Dark Patterns}
+\label{sssec:temporal_dark_patterns}
 Sorgen dafür, dass Spieler mehr oder weniger Zeit als erwartet mit einem Spiel verbringen. Oft kann dabei das Gefühl entstehen, dass Spieler ihre Zeit verschwenden.
 
-\paragraph{Grinding} ist die Ausführung wiederholender, langwieriger Aufgaben durch den Spieler und kommt vor allem in MMORPGs\footnote{\label{foot:8} MMORPG steht für das Videospiel-Genre \textit{Massively Multiplayer Online Role-Playing Game}, bei dem mehrere Spieler online miteinander interagieren können.} und Social Media Games\footnote{\label{foot:9} Social Media Games ist ein Typ von Videospielen, das über ein Soziales Netzwerk gespielt werden kann.} vor \cite{nakamura}. Es ist ein wohlbekanntes, jedoch umstrittenes Konzept für Gamer, wodurch der Spieler Fortschritt machen und Belohnungen erhalten kann. Allerdings hat diese Aktivität ein hohes Suchtpotential \cite{king}.\newline 
+\paragraph{Grinding}
+\label{para:grinding}
+ist die Ausführung wiederholender, langwieriger Aufgaben durch den Spieler und kommt vor allem in MMORPGs\footnote{\label{foot:8} MMORPG steht für das Videospiel-Genre \textit{Massively Multiplayer Online Role-Playing Game}, bei dem mehrere Spieler online miteinander interagieren können.} und Social Media Games\footnote{\label{foot:9} Social Media Games ist ein Typ von Videospielen, das über ein Soziales Netzwerk gespielt werden kann.} vor \cite{nakamura}. Es ist ein wohlbekanntes, jedoch umstrittenes Konzept für Gamer, wodurch der Spieler Fortschritt machen und Belohnungen erhalten kann. Allerdings hat diese Aktivität ein hohes Suchtpotential \cite{king}.\newline 
 Vor allem Spieler, die sich mit anderen messen wollen, sind betroffen, da sie zur Erreichung ihrer Ziele anstreben müssen, besser zu werden. Für diejenigen, die sich dem Grinding verweigern, kann das Spielerlebnis eher beeinträchtigt werden. 
 
-\paragraph{Playing by Appointment} verlangt vom Spieler, zu einem bestimmten, vom Spiel festgelegten Zeitpunkt das Spiel wieder aufzunehmen. In einigen Fällen droht dem Spieler ansonsten der Fortschritt, den er in einem Spiel gemacht hat.\newline
+\paragraph{Playing by Appointment}
+\label{para:playing_by_appointment}
+verlangt vom Spieler, zu einem bestimmten, vom Spiel festgelegten Zeitpunkt das Spiel wieder aufzunehmen. In einigen Fällen droht dem Spieler ansonsten der Fortschritt, den er in einem Spiel gemacht hat.\newline
 In \textit{FarmVille} zum Beispiel, einem beliebten Social Network Game, werden Pflanzen gesät, um Punkte und Ressourcen zu erhalten, und diese müssen zu einem bestimmten Zeitpunkt (nach genau 24 Stunden) geerntet werden, bevor sie auf Anhieb verwelken. Der Spieler wird also dazu verpflichtet, seinen Tagesablauf dementsprechend anzupassen.
 
 \subsubsection{Monetary Dark Patterns}
+\label{ssec:monetary_dark_patterns}
 Spieler sollen dazu gebracht werden, mehr Geld auszugeben als erwartet oder erhofft. Kann zu Reuegefühlen, Verlust von Zeitgefühl und zu Geldverlust führen.\newline
 Nicht zu verwechseln mit Glücks- oder Wettspielen.
 
-\paragraph{Pay to Skip} ist ein Konzept, das zu Arcade-Zeiten der 80er Jahre vertraut war, in dem man zum Fortfahren des Spiels eine Münze in den Automaten werfen musste. Heutzutage tritt dieses Dark Pattern oft in Free-to-play Games\footnote{\label{foot:10} Free-to-play Games sind grundsätzlich kostenlos spielbar und beinhalten oft kostenpflichtige Inhalte oder Werbung.} und Social Media Games auf. Es sieht vor, dass Spieler Geld ausgeben, um in einem Spiel voranzukommen.\newline
+\paragraph{Pay to Skip} 
+\label{para:pay_to_skip}
+ist ein Konzept, das zu Arcade-Zeiten der 80er Jahre vertraut war, in dem man zum Fortfahren des Spiels eine Münze in den Automaten werfen musste. Heutzutage tritt dieses Dark Pattern oft in Free-to-play Games\footnote{\label{foot:10} Free-to-play Games sind grundsätzlich kostenlos spielbar und beinhalten oft kostenpflichtige Inhalte oder Werbung.} und Social Media Games auf. Es sieht vor, dass Spieler Geld ausgeben, um in einem Spiel voranzukommen.\newline
 Bei dem Augmented Reality Spiel \textit{Harry Potter: Wizards Unite} kann eine bestimmte Aktion nur mit einer Währung innerhalb des Spiels ausgeführt werden, und wenn diese aufgebraucht ist, muss man entweder ein sog. Gasthaus besuchen, oder (wenn kein Gasthaus in der Nähe ist) darauf warten, dass der Timer abgelaufen ist und der Spieler einen vom Spiel festgelegten Betrag der Währung erhält. Die Hauptfunktion des Spiels ist während dieser Wartezeit nicht verfügbar, somit ist das Weiterspielen unmöglich. Der Spieler kann diesen Timer mit Echtgeld überspringen.
 
-\paragraph{Pre-Delivered Content} bedeutet, wenn trotz Erwerben eines Spiele-Exemplars bestimmte Inhalte oder Funktionen erst mit Zahlung einer Gebühr freigeschaltet werden müssen. Der Spieler bekommt dadurch das Gefühl, ein unvollständiges Spiel erworben zu haben.\newline
+\paragraph{Pre-Delivered Content}
+\label{para:pre_delivered_content}
+bedeutet, wenn trotz Erwerben eines Spiele-Exemplars bestimmte Inhalte oder Funktionen erst mit Zahlung einer Gebühr freigeschaltet werden müssen. Der Spieler bekommt dadurch das Gefühl, ein unvollständiges Spiel erworben zu haben.\newline
 Die aktuellen Spiele der \textit{Tekken}-Serie bietet mehrere spielbare Charaktere an, von denen viele erst gegen eine Gebühr ausgewählt werden können. 
 
-
-\paragraph{Monetized Rivalries} wird auch als \textit{Pay to Win} bezeichnet und steht im Zusammenhang mit \textit{Grinding}. In manchen Spielen kommt es vor, dass das Ansammeln von In-Game Währungen so langsam voran geht, dass sich ein Spieler sehr lange mit Grinding beschäftigen muss, um die für das Weiterkommen notwendigen Gegenstände freischalten zu können.\newline
+\paragraph{Monetized Rivalries} 
+\label{para:monetized_rivalries}
+wird auch als \textit{Pay to Win} bezeichnet und steht im Zusammenhang mit \textit{Grinding}. In manchen Spielen kommt es vor, dass das Ansammeln von In-Game Währungen so langsam voran geht, dass sich ein Spieler sehr lange mit Grinding beschäftigen muss, um die für das Weiterkommen notwendigen Gegenstände freischalten zu können.\newline
 Ein Spieler kann sich, vor allem bei Wettkämpfen, durch Cheat Codes\footnote{\label{foot:11} Cheat Codes oder Cheats sind Einflussmöglichkeiten auf den Spielverlauf, die ursprünglich nicht vorgesehen sind und werden von Spielern verwendet, die ein Spiel zu ihren Gunsten manipulieren wollen.} oder schwer zu bekommende Gegenstände Vorteile gegenüber anderen Spielern verschaffen, indem er Echtgeld in eine In-Game Währung investiert. Somit können Top-Ränge und die damit verbundenen Bonusinhalte erreicht werden, wenn mit Echtgeld immer wieder Upgrades oder neueste Gegenstände erworben werden, während es weniger zahlungsfähigen Spielern unmöglich gemacht wird, eine Position in der Bestenliste zu erreichen.\newline
 In dem Social Media Game \textit{Candy Crush Saga} ist es für den Spieler erforderlich, Geld im Spiel zu kaufen, um gegenüber seinen Facebook-Freunden konkurrenzfähig zu bleiben.  
 
 \subsubsection{Social Capital-Based Dark Patterns}
+\label{sssec:social_capital_based_dark_patterns}
 Spieler erhalten starke Anreize, wie Boni und Vorteile im Spiel, wenn sie ihre Freunde und Familienmitglieder zum Spielen einladen.
 
-\paragraph{Social Pyramid Schemes} macht Gebrauch von den Beziehungen des Spielers, bei dem dieser pro eingeladenem Freund Spiele-Vorteile bekommt. Oft werden bestimmte Funktionen erst freigeschaltet, wenn man eine bestimmte Anzahl an Freunden hinzugefügt hat.
+\paragraph{Social Pyramid Schemes}
+\label{para:social_pyramid_schemes}
+macht Gebrauch von den Beziehungen des Spielers, bei dem dieser pro eingeladenem Freund Spiele-Vorteile bekommt. Oft werden bestimmte Funktionen erst freigeschaltet, wenn man eine bestimmte Anzahl an Freunden hinzugefügt hat.
 
-\paragraph{Impersonation} wird vor allem in Social Network Games genutzt und ist vergleichbar mit Brignull's \textit{Friend Spam}. Hier werden die Namen aus der Kontaktliste des Spielers für Benachrichtigungen an ihn selbst verwendet. So erhält ein Spieler zum Beispiel eine Nachricht über ein Geschenk eines Freundes, obwohl dieser Freund eine solche Aktion gar nicht ausgeführt hat. Somit wird der Spieler dazu motiviert, das Spiel (weiter) zu spielen. Der Spieler kann sich dadurch auch verpflichtet fühlen, ein Geschenk zurück zu senden.
+\paragraph{Impersonation}
+\label{para:impersonation}
+wird vor allem in Social Network Games genutzt und ist vergleichbar mit Brignull's \textit{Friend Spam}. Hier werden die Namen aus der Kontaktliste des Spielers für Benachrichtigungen an ihn selbst verwendet. So erhält ein Spieler zum Beispiel eine Nachricht über ein Geschenk eines Freundes, obwohl dieser Freund eine solche Aktion gar nicht ausgeführt hat. Somit wird der Spieler dazu motiviert, das Spiel (weiter) zu spielen. Der Spieler kann sich dadurch auch verpflichtet fühlen, ein Geschenk zurück zu senden.
 
 \subsection{Proxemische Interaktions-Systeme}
 \label{sub:proxemische_interaktions-systeme}{}
@@ -407,35 +472,43 @@ Der Begriff der \textit{Proxemik} wurde vom Anthropologen Edward T. Hall im Jahr
 Greenberg et al. erstellten eine Prognose, wie diese Technologie potentiell missbraucht werden könnte \cite{greenberg}. Nachfolgend wird diese zusammenfassend erläutert.
 
 \subsubsection{The Captive Audience}
+\label{sssec:the_captive_audience}
 Eine Technologie wird im Raum strategisch platziert und nutzt die Gelegenheit der \glqq Gefangenschaft\grqq{} von Personen zu eigenen Zwecken aus, die an einem bestimmten Ort ein Ziel erreichen möchten, welches eine gewisse Zeit in Anspruch nimmt. So müssen Menschen beim Aufsuchen eines Ortes zur Durchführung einer Routine hinnehmen, dass das System eine unaufgeforderte und möglicherweise ungewollte Aktion ausführt.\newline
 Beispiele umfassen unter anderem Spiegelflächen-Werbung in öffentlichen Toiletten \cite{youtube} und öffentliche Werbeflächen. Ein weiteres Beispiel ist ein Projekt der Werbeagentur BBDO und dem Sender Sky Go, die einen Prototypen entwickelten, das über hochfrequentige Vibrationen Audio-Werbung für Pendler abspielt, sobald diese ihren Kopf an das Zugfenster lehnen \cite{zugfenster_ad}.  
 
 \subsubsection{The Attention Grabber}
+\label{sssec:the_attention_grabber}
 Ein strategisch in der Öffentlichkeit platziertes, proxemisch-sensibles System erzeugt Aufmerksamkeit, nachdem es ins Blickfeld einer vorbeilaufenden Person kommt. Es soll den Passanten in einen Kunden verwandeln.\newline
 Proximity Marketing, wie Apple's iBeacon oder Samsung Proximity, ist ein Beispiel dafür \cite{proximity_marketing} \cite{proximity_marketing2}. Hier werden Kunden in der Nähe via Smartphone-Benachrichtigung Informationen zugesendet, wie Produkt-Vorschläge oder Angebote.
 
 \subsubsection{Bait and Switch}
+\label{sssec:bait_and_switch2}
 Das System lockt einen Betrachter mit begehrenswerten Angeboten oder interessanten Informationen, sobald dieser allerdings darauf aufmerksam wird und sich der Anzeige nähert, verändert sich die Werbung. Daraufhin kann ihm ein Angebot angezeigt werden, das im Bezug auf Preis und Qualität nicht seinen Erwartungen entspricht, weil das zuvor angezeigte Produkt nicht mehr verfügbar ist. Es kann auch zur Darstellung von unerwarteter Werbung genutzt werden. Genauso ist es möglich, den Passanten nach einer Registrierung bei einem ungewollten Service zu fragen, damit er die Interaktion fortführen kann, was mit eventuellen Sicherheitsrisiken verbunden ist.\newline
 Amnesty International platzierte 2009 eine Werbung an einer Bushaltestelle, die mithilfe von Eye Tracking erkennen konnte, wann ein Wartender auf die Anzeige schaut und kurz darauf wurde das Bild verändert. Zunächst wurde ein Bild angezeigt, die Häusliche Gewalt darstellte, und sobald man hinsah, zeigte das Bild ein vermeintlich glückliches Pärchen. Dies sollte auf Häusliche Gewalt aufmerksam machen mit dem Slogan \glqq Es passiert, wenn niemand hinsieht.\grqq{} \cite{amnesty_international}
 Ein anderes, aktuelles Beispiel ist Öffentliches WLAN, wie am Bahnhof oder in Flughäfen. Personen werden mit angeblicher kostenloser WLAN-Verbindung angeworben, jedoch stellt sich erst später heraus, dass der Service erst nach einer Registrierung nutzbar ist. Nach erfolgreicher Verbindung ist die Surfgeschwindigkeit dann allerdings zu langsam und der Nutzer zieht möglicherweise ein Upgrade auf ein Premium-Angebot mit einer schnelleren Surfgeschwindigkeit in Erwägung.
 
 \subsubsection{Making Personal Information Public}
+\label{sssec:making_personal_information_public}
 Sobald eine Person einen bestimmten Bereich betritt, werden seine persönlichen Informationen öffentlich sichtbar gemacht. So können persönliche Informationen, wie Kalender-Einträge, Benachrichtigungen oder Direktnachrichten, auf Geräten in der Nähe angezeigt werden, z.B. auf öffentlichen \glqq Ambient Displays\grqq{}. Diese Systeme haben eigentlich die Absicht, hilfreich zu sein, jedoch können Außenstehende diese persönlichen Informationen einsehen.\newline
 In 2009 wagte eine niederländische Werbeagentur eine Guerilla-Marketing Aktion an einer Bushaltestelle von Fitness First in Rotterdam: Ein Gewichtssensor wurde in einer Sitzbank eingebaut und zeigte das Gewicht einer Person auf einem öffentlichen Display an, sobald diese Platz nahm \cite{fitness_first}.
 
 \subsubsection{We Never Forget}
+\label{sssec:we_never_forget}
 Ein System identifiziert proxemische Interaktionen, weil eine permanente, fortbestehende (und ungewollte) Beziehung besteht. Der Verlauf von vergangenen proxemischen Interaktionen wird gespeichert, welcher dazu verwendet werden kann, Verbindungen wiederherzustellen, einen Informationsaustausch durchzuführen, und/oder um vorherige Kontexte wiederherzustellen (z.B. die Anzeige der letzten angezeigten Informationen).\newline
 Ein typisches Vorkommnis sind WiFi Hotspots, mit der sich mobile Geräte verbinden können. Möglicherweise möchten Nutzer es bei einer einmaligen Nutzung, und trotzdem kommt es zu einer erneuten, automatischen Verbindung mit dem Service. Dies kann auch die Sicherheit des Nutzers gefährden, wenn beispielsweise jemand ein gestohlenes Handy verwendet und die Anmeldedaten des (ehemaligen) Nutzers missbraucht.
 
 \subsubsection{Disguised Data Collection}
+\label{sssec:disguised_data_collection}
 Zur Verfügung gestellte Informationen eines bestimmten Services wird missbraucht, um Nutzerprofile mit Informationen anzureichern, ohne dass der Nutzer seine Zustimmung abgibt. Systeme, die proxemische Beziehungen nachverfolgen können, haben somit Zugang zu zahlreichen Daten über das Verhalten seiner Nutzer. Diese Infos können von Marketing-Abteilungen potentiell dazu genutzt werden, um Personen zu orten und zu verfolgen und dadurch herauszufinden, wie effektiv Marketing-Aktionen sind. Diese Technologie kann möglich gemacht werden mit bspw. RFID-Chips, Rundfunk-Mobiltelefone und Smart Cards. Viele öffentliche Displays arbeiten bereits mit Computervision, um proxemische Interaktionen nachzuverfolgen, demnach können Bildaufnahmen analysiert und Personen dadurch identifiziert werden. Zudem können kostenlose WiFi-Dienste aufspüren, an welchem Standort bzw. in welchem Geschäft sich eine Person befindet, indem die Signalstärke und die IP-Adresse des Geräts innerhalb eines Geschäfts gelesen wird.\newline
 Kombiniert mit anderen Daten-Ansammlungen, z.B. dem proxemischen Interaktionsverlauf (\textit{We Never Forget}), kann ein noch ausführlicheres Profil erstellt werden.
 
 \subsubsection{The Social Network of Proxemic Contacts or Unintended Relationships}
+\label{sssec:the_social_network_of_proxemic_contacts}
 Das System verfolgt die proxemischen Beziehungen des Nutzers zu anderen und konstruiert auf dessen Basis ein soziales Netzwerk. Dabei geht es davon aus, dass der Nutzer in einer sozialen Beziehung zu diesen Personen steht, auch wenn dies nicht der Fall ist.\newline
 Mit den Daten könnten Marketer beispielsweise Zielgruppen durch demographische Merkmale erkennen. Die Techniken, die in \textit{Disguised Data Collection} beschrieben wurden, können auch dazu genutzt werden, soziale Beziehungen abzuschätzen, indem bspw. physische Distanz oder gemeinsame Interessen analysiert werden.
 
 \subsubsection{The Milk Factor}
+\label{sssec:the_milk_factor}
 Ein proxemisches System zwingt eine Person, durch einen bestimmten Ort zu gehen oder diesen aufzusuchen, um einen Service zu erhalten.\newline
 Ähnlich wie in Supermärkten, wo Produkte strategisch platziert sind, um die Sichtbarkeit von bestimmten, promoteten Gegenständen und somit Impulskäufe zu erhöhen, können proxemische Interaktionen dafür sorgen, dass in Zonen bestimmte Funktionalitäten unzugänglich sind, damit Menschen sich zu bestimmten Orten begeben.\newline
 In Japan etwa gibt es Getränkeautomaten, die, wenn man weit weg steht, Werbebilder zeigen, angepasst an die aktuelle Jahreszeit, Temparatur und Tageszeit. Erst, wenn man sich dem Automaten nähert, kann man erkennen, welche Getränke angeboten werden. Demographische und Verkaufs-Daten werden ohne Einwilligung auf dem Firmenserver hochgeladen und für Analysen und zu Marketing-Zwecken verwendet.
